@@ -1,4 +1,5 @@
 ### Schema
+
 CREATE DATABASE jpwf_db;
 USE jpwf_db;
 
