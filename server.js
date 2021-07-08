@@ -1,6 +1,7 @@
 const exphbs = require('express-handlebars');
 const express = require('express');
 const mysql = require('mysql');
+const { resolveSoa } = require('dns');
 
 const app = express();
 
@@ -22,7 +23,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: '',
+  password: 'Colorado23',
   database: 'jpwf_db',
 });
 
@@ -33,6 +34,18 @@ connection.connect((err) => {
   }
   console.log(`connected as id ${connection.threadId}`);
 });
+
+
+app.get('/', (req, res) => {
+  // connection.query('', [], (err, data) => {
+  //   if (err) {
+  //     return res.statusMessage(500).end()
+  //   }
+
+    res.render('search', {})
+    
+  })
+// })
 
 
 app.listen(PORT, () =>
