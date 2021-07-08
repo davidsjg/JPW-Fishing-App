@@ -37,15 +37,24 @@ connection.connect((err) => {
 
 
 app.get('/', (req, res) => {
-  // connection.query('', [], (err, data) => {
-  //   if (err) {
-  //     return res.statusMessage(500).end()
-  //   }
+
 
     res.render('search', {})
     
   })
-// })
+
+app.get('/lake', (req, res) => {
+  connection.query(
+    'SELECT * FROM lakes',  
+    (err, data) => {
+    if (err) {
+      return res.statusMessage(500).end()
+    }
+
+    res.render('lake', {lakes: data})
+    
+  })
+})
 
 
 app.listen(PORT, () =>
