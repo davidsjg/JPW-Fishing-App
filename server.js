@@ -37,22 +37,26 @@ connection.connect((err) => {
 
 
 app.get('/', (req, res) => {
-
-
-    res.render('search', {})
-    
-  })
-
-app.get('/lake', (req, res) => {
   connection.query(
-    'SELECT * FROM lakes',  
+    'SELECT * FROM lakes', 
     (err, data) => {
-    if (err) {
-      return res.statusMessage(500).end()
-    }
+      if (err) {
+        return res.status(500).end()
+      }
+      res.render('lake', {lakes: data})
 
-    res.render('lake', {lakes: data})
-    
+  })
+})
+
+app.get('/:lake', (req, res) => {
+  connection.query(
+    'SELECT * FROM lakes', 
+    (err, data) => {
+      if (err) {
+        return res.status(500).end()
+      }
+      res.render('lake', {lakes: data})
+
   })
 })
 
@@ -60,3 +64,30 @@ app.get('/lake', (req, res) => {
 app.listen(PORT, () =>
   console.log(`Server listening on: http://localhost:${PORT}`)
 );
+
+
+
+
+
+
+
+// app.get('/', (req, res) => {
+
+
+  //     res.render('search', {})
+      
+  //   })
+  
+  // app.get('/api/Jenny', (req, res) => {
+  //   connection.query(
+  //     'SELECT * FROM lakes',  
+  //     [req.body.lake],
+  //     (err, data) => {
+  //     if (err) {
+  //       return res.statusMessage(500).end()
+  //     }
+  
+  //     res.render('lake', {lakes: data[0]})
+      
+  //   })
+  // })
