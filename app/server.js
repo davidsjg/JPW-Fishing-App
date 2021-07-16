@@ -19,46 +19,8 @@ app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: 'Colorado23',
-  database: 'jpwf_db',
-});
-
-connection.connect((err) => {
-  if (err) {
-    console.error(`error connecting: ${err.stack}`);
-    return;
-  }
-  console.log(`connected as id ${connection.threadId}`);
-});
-
-
-app.get('/', (req, res) => {
-  connection.query(
-    'SELECT * FROM lakes', 
-    (err, data) => {
-      if (err) {
-        return res.status(500).end()
-      }
-      res.render('lake', {lakes: data})
-
-  })
-})
-
-app.get('/:lake', (req, res) => {
-  connection.query(
-    'SELECT * FROM lakes', 
-    (err, data) => {
-      if (err) {
-        return res.status(500).end()
-      }
-      res.render('lake', {lakes: data})
-
-  })
-})
+require('../app/routes/api-routes.js')(app)
+require('../app/routes/html-routes.js')(app)
 
 
 app.listen(PORT, () =>
@@ -66,28 +28,64 @@ app.listen(PORT, () =>
 );
 
 
-
-
-
+// connection.connect((err) => {
+//   if (err) {
+//     console.error(`error connecting: ${err.stack}`);
+//     return;
+//   }
+//   console.log(`connected as id ${connection.threadId}`);
+// });
 
 
 // app.get('/', (req, res) => {
+//   connection.query(
+//     'SELECT * FROM lakes', 
+//     (err, data) => {
+//       if (err) {
+//         return res.status(500).end()
+//       }
+//       res.render('lake', {lakes: data})
+
+//   })
+// })
+
+// app.get('/:lake', (req, res) => {
+//   connection.query(
+//     'SELECT * FROM lakes', 
+//     (err, data) => {
+//       if (err) {
+//         return res.status(500).end()
+//       }
+//       res.render('lake', {lakes: data})
+
+//   })
+// })
 
 
-  //     res.render('search', {})
+
+
+
+
+
+
+
+// // app.get('/', (req, res) => {
+
+
+//   //     res.render('search', {})
       
-  //   })
+//   //   })
   
-  // app.get('/api/Jenny', (req, res) => {
-  //   connection.query(
-  //     'SELECT * FROM lakes',  
-  //     [req.body.lake],
-  //     (err, data) => {
-  //     if (err) {
-  //       return res.statusMessage(500).end()
-  //     }
+//   // app.get('/api/Jenny', (req, res) => {
+//   //   connection.query(
+//   //     'SELECT * FROM lakes',  
+//   //     [req.body.lake],
+//   //     (err, data) => {
+//   //     if (err) {
+//   //       return res.statusMessage(500).end()
+//   //     }
   
-  //     res.render('lake', {lakes: data[0]})
+//   //     res.render('lake', {lakes: data[0]})
       
-  //   })
-  // })
+//   //   })
+//   // })

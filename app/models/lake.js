@@ -16,3 +16,7 @@ const Lake = sequlize.define('lake', {
     distance: Sequlize.INTEGER,
     elevGain: Sequlize.INTEGER,
 })
+
+Lake.sync()
+
+module.exports = Lake
