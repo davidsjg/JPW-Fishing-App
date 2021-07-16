@@ -5,11 +5,12 @@ if (event) {
 
 const searchForm = document.getElementById('searchForm')
 const searchLake = document.getElementById('lakeSearch')
+const searchBtn = document.getElementById('searchBtn')
 
 
 
-if(searchForm){
-searchForm.addEventListener('submit', (e) => {
+if(searchBtn){
+searchBtn.addEventListener('click', () => {
     e.preventDefault()
 
     const lakeParam = searchLake.value
@@ -20,17 +21,18 @@ searchForm.addEventListener('submit', (e) => {
     console.log(`search for ${searchLake.value} Lake`)
 
     fetch(`/api/${lakeParam}`, {
-        method: 'GET',
+        method: 'get',
         headers: {
-            Accept: 'application/json',
             'Content-Type': 'application/json'
         },
 
         body: JSON.stringify(findLake)
-    }).then((response) => {
-        // Check that the response is all good
-        // Reload the page so the user can see the new quote
-        console.log('success')
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log('Search lake data', data)
+        
+
     })
 
 })
