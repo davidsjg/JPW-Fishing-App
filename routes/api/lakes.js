@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const lakeController = require("../../controller/lakeController");
 
-// Matches with "/api/cities"
-router.route("/").get(destinationController.findAll);
+// Matches with "/api/lakes"
+router.route("/").get(lakeController.findAll);
 //   .post(destinationController.create)
 //   .put(destinationController.update);
 
