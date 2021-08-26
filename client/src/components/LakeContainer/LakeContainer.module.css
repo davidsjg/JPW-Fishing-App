@@ -1,0 +1,23 @@
+.dropContainer {
+  align-items: center;
+}
+
+#ddBar {
+  background-color: orange;
+  align-items: center;
+}
+
+#nav-dropdown {
+  color: white;
+  font-weight: bold;
+  background-color: orange;
+}
+
+.dropdown {
+  align-items: center;
+}
+
+.colClass {
+  align-items: center;
+  text-align: center;
+}
