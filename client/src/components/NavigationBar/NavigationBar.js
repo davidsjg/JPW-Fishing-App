@@ -5,8 +5,12 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Contain from "../Contain/Contain";
 import Col from "../Col/Col";
-import Row from "../Row/Row";
+import ColLogo from "../Col/Col";
 import JPWlogo from "./JPWlogo.png";
+import styles from "./NavigationBar.module.css";
+import Row from "../Row/Row";
+
+// import styles from "./NavigationBar.module.css";
 
 // import { StyleSheet, Text, View } from 'react-native'
 
@@ -25,9 +29,9 @@ export default function NavigationBar() {
                 </Nav>
               </Navbar.Collapse>
             </Col>
-            <Col size="md-4">
-              <img src={JPWlogo}></img>
-            </Col>
+            <ColLogo size="md-4">
+              <img src={JPWlogo} className={styles["logo"]}></img>
+            </ColLogo>
             <Col size="md-4">CHUP</Col>
           </Row>
         </Contain>
