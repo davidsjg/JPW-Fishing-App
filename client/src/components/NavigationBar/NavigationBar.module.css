@@ -1,5 +1,14 @@
-.logo {
-  max-height: 80px;
-  max-width: 325px;
-  align-items: center;
+.Navbar.Collapse {
+  float: right !important;
+}
+
+.navColor {
+  color: black;
+}
+
+.navBorder {
+  border-color: black;
+  border-bottom: black;
+  border-bottom-width: 10px;
+  background-color: orange;
 }
