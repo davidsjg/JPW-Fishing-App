@@ -4,6 +4,9 @@
 
 .navColor {
   color: black;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 2px;
 }
 
 .navBorder {
@@ -11,4 +14,7 @@
   border-bottom: black;
   border-bottom-width: 10px;
   background-color: orange;
+  border-radius: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
