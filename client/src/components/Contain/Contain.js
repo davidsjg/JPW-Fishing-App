@@ -1,6 +1,6 @@
 import React from "react";
 
-function Container(props) {
+function Contain(props) {
   return (
     <div className={`container${props.fluid ? "-fluid" : ""}`}>
       {props.children}
@@ -8,4 +8,4 @@ function Container(props) {
   );
 }
 
-export default Container;
+export default Contain;

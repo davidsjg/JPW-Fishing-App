@@ -1,11 +1,8 @@
 import "./App.css";
-
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
-
-import "./App.css";
-
 import Home from "./pages/Home";
+import NavigationBar from "./components/NavigationBar/NavigationBar";
 
 function App() {
   // const [lakeState, setLakeState] = useState({
@@ -15,16 +12,23 @@ function App() {
   // const [fishState, setFishState] = useState(["cutthroat"]);
 
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path={"/"}>
-          <Home />
-        </Route>
-        <Route exact path={"/lakes"}>
-          <Home />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <div>
+        <NavigationBar />
+        <Switch>
+          <Route exact path={"/"}>
+            <div>
+              <Home />
+            </div>
+          </Route>
+          <Route exact path={"/lakes"}>
+            <div>
+              <Home />
+            </div>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

@@ -1,23 +1,23 @@
 import React from "react";
 import Row from "../Row/Row";
 import Col from "../Col/Col";
-import Container from "../Container/Container";
+import Contain from "../Contain/Contain";
 import Card from "../Card/Card";
 
 // import { StyleSheet, Text, View } from 'react-native'
 
 export default function LakeContainer() {
   return (
-    <Container>
+    <Contain>
       <Row>
-        <Col size="md-8">
+        <Col size="md-6">
           <Card />
         </Col>
-        <Col size="md-4">
+        <Col size="md-6">
           <Card></Card>
         </Col>
       </Row>
-    </Container>
+    </Contain>
   );
 }
 
