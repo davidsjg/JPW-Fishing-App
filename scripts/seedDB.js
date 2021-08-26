@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/jpwFishingDB");
 
 const lakeSeed = [
   {
-    lake: "Arapahoe",
+    lake: "Arapahoe (Lower)",
     acres: 11,
     year: 2008,
     fish: ["Cutthroat"],

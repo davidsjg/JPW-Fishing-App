@@ -8,6 +8,12 @@ import "./App.css";
 import Home from "./pages/Home";
 
 function App() {
+  const [lakeState, setLakeState] = useState({
+    lake: "Heart Lake",
+  });
+
+  const [fishState, setFishState] = useState(["cutthroat"]);
+
   return (
     <BrowserRouter>
       <Switch>
