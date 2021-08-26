@@ -12,7 +12,7 @@ function ColLogo(props) {
     .join(" ");
 
   return (
-    <div className={styles["logo"]} className={size}>
+    <div className="roundedCircle" className={styles["logo"]} className={size}>
       {props.children}
     </div>
   );

@@ -7,8 +7,9 @@ import Contain from "../Contain/Contain";
 import Col from "../Col/Col";
 import ColLogo from "../Col/Col";
 import JPWlogo from "./JPWlogo.png";
-import styles from "./NavigationBar.module.css";
+// import styles from "./NavigationBar.module.css";
 import Row from "../Row/Row";
+import Image from "react-bootstrap/Image";
 
 // import styles from "./NavigationBar.module.css";
 
@@ -30,7 +31,7 @@ export default function NavigationBar() {
               </Navbar.Collapse>
             </Col>
             <ColLogo size="md-4">
-              <img src={JPWlogo} className={styles["logo"]}></img>
+              <Image src={JPWlogo} fluid rounded />
             </ColLogo>
             <Col size="md-4">CHUP</Col>
           </Row>
