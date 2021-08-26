@@ -1,11 +1,15 @@
 import React from "react";
+// import { StyleSheet } from "react-native";
 
-function Card() {
+export default function Card() {
   return (
-    <View>
-      <Text></Text>
-    </View>
+    <div className="card text-center">
+      <div className="card-header">
+        <h2>{props.heading}</h2>
+      </div>
+      <div className="card-body">{props.children}</div>
+    </div>
   );
 }
 
-export default Card;
+// const styles = StyleSheet.create({});
