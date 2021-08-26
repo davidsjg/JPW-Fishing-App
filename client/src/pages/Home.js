@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import LakeContainer from "../components/LakeContainer/LakeContainer";
 
 import API from "../utils/API";
 
@@ -13,7 +14,11 @@ function Home() {
       .catch((err) => console.log(err));
   }
 
-  return <>HELLO FROM HOME PAGE</>;
+  return (
+    <>
+      <LakeContainer />
+    </>
+  );
 }
 
 export default Home;
