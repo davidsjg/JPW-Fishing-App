@@ -6,54 +6,66 @@ import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Contain from "./components/Contain/Contain";
 import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
+import { STATES } from "mongoose";
 
 function App() {
-  //by calling useState, it gives us access two fishState and setFishState that we are destructuring from an array
-  const [lakeState, setLakeState] = useState({});
-  console.log(lakeState);
+  //empty array as second parameter means it only runs once
 
-  const [fishState, setFishState] = useState(["Cutthroat"]);
-  console.log(fishState);
+  const tempObject = {
+    lake: "Heart Lake",
+  };
+
+  const [lakeState, setLakeState] = useState({
+    lake: { tempObject },
+    fish: ["Cutthroat"],
+  });
+  console.log(lakeState);
 
   useEffect(() => {
     loadLakes();
   }, []);
 
+  function fishState(fish) {
+    setLakeState({ ...lakeState, fish });
+  }
+
   function getFish(res) {
     console.log(res.data[0].fish);
-    setFishState(res.data[0].fish);
+    let tempFish = res.data[0].fish;
+    fishState(tempFish);
   }
 
   function loadLakes() {
     API.getLakes()
-      .then((res) => {
-        setLakeState(res);
-        setFishState(res.data[0].fish);
-        getFish(res);
+      .then((lake) => {
+        setLakeState({ ...lakeState, lake });
+        // getFish(res);
       })
       .catch((err) => console.log(err));
   }
 
   return (
-    <Router>
-      <Contain>
-        <div className="imageDiv">
-          <NavigationBar />
-          <Switch>
-            <Route exact path={"/"}>
-              <div>
-                <Home />
-              </div>
-            </Route>
-            <Route exact path={"/lakes"}>
-              <div>
-                <Home />
-              </div>
-            </Route>
-          </Switch>
-        </div>
-      </Contain>
-    </Router>
+    <LakeContext.Provider value={lakeState}>
+      <Router>
+        <Contain>
+          <div className="imageDiv">
+            <NavigationBar />
+            <Switch>
+              <Route exact path={"/"}>
+                <div>
+                  <Home />
+                </div>
+              </Route>
+              <Route exact path={"/lakes"}>
+                <div>
+                  <Home />
+                </div>
+              </Route>
+            </Switch>
+          </div>
+        </Contain>
+      </Router>
+    </LakeContext.Provider>
   );
 }
 

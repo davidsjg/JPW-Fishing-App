@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import LakeContext from "../utils/LakeContext";
 import LakeContainer from "../components/LakeContainer/LakeContainer";
 
 import API from "../utils/API";
 
 function Home() {
-  return (
-    <>
-      <LakeContainer />
-    </>
-  );
+  //by calling useState, it gives us access two fishState and setFishState that we are destructuring from an array
+
+  const { lake } = useContext(LakeContext);
+
+  console.log(lake);
+
+  return <LakeContainer />;
 }
 
 export default Home;
