@@ -18,9 +18,18 @@ function App() {
     loadLakes();
   }, []);
 
+  function getFish(lake) {}
+
+  function isoFish(res) {
+    console.log(res);
+  }
+
   function loadLakes() {
     API.getLakes()
-      .then((res) => setLakeState(res))
+      .then((res) => {
+        setLakeState(res);
+        isoFish(res);
+      })
       .catch((err) => console.log(err));
   }
 

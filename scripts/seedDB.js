@@ -21,6 +21,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 10,
   },
   {
@@ -39,6 +41,8 @@ const lakeSeed = [
       max: 12.5,
     },
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 8,
   },
   {
@@ -56,6 +60,8 @@ const lakeSeed = [
       max: 13.2,
     },
     splake: true,
+    rainbow: false,
+    lakeTrout: false,
     distance: 6,
   },
   {
@@ -73,6 +79,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 11,
   },
   {
@@ -90,6 +98,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 11,
   },
   {
@@ -107,6 +117,8 @@ const lakeSeed = [
       max: 15.7,
     },
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 6,
   },
   {
@@ -124,6 +136,8 @@ const lakeSeed = [
       max: 10.7,
     },
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 6,
   },
   {
@@ -141,6 +155,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 12,
   },
   {
@@ -158,6 +174,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 15,
   },
   {
@@ -175,6 +193,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 15,
   },
   {
@@ -192,6 +212,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 15,
   },
   {
@@ -209,6 +231,8 @@ const lakeSeed = [
       max: 10.6,
     },
     splake: false,
+    rainbow: true,
+    lakeTrout: false,
     distance: 14,
   },
   {
@@ -226,6 +250,8 @@ const lakeSeed = [
       max: 0,
     },
     splake: true,
+    rainbow: false,
+    lakeTrout: true,
     distance: 14,
   },
   {
@@ -242,7 +268,9 @@ const lakeSeed = [
       min: 5.7,
       max: 12.2,
     },
-    splake: true,
+    splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 14,
   },
   {
@@ -260,6 +288,8 @@ const lakeSeed = [
     brkAvgLength: 0,
     brkRange: 0,
     splake: false,
+    rainbow: false,
+    lakeTrout: false,
     distance: 13,
   },
 ];
