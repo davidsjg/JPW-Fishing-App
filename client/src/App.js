@@ -16,7 +16,7 @@ function App() {
   };
 
   const [lakeState, setLakeState] = useState({
-    lake: { tempObject },
+    lake: {},
     fish: ["Cutthroat"],
   });
   console.log(lakeState);
@@ -25,21 +25,12 @@ function App() {
     loadLakes();
   }, []);
 
-  function fishState(fish) {
-    setLakeState({ ...lakeState, fish });
-  }
-
-  function getFish(res) {
-    console.log(res.data[0].fish);
-    let tempFish = res.data[0].fish;
-    fishState(tempFish);
-  }
-
   function loadLakes() {
     API.getLakes()
       .then((lake) => {
-        setLakeState({ ...lakeState, lake });
-        // getFish(res);
+        let fish = lake.data[0].fish;
+        setLakeState({ lake, fish });
+        // getFish(lake);
       })
       .catch((err) => console.log(err));
   }
