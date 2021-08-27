@@ -12,23 +12,24 @@ function App() {
   const [lakeState, setLakeState] = useState({});
   console.log(lakeState);
 
-  const [fishState, setFishState] = useState(["cutthroat"]);
+  const [fishState, setFishState] = useState(["Cutthroat"]);
+  console.log(fishState);
 
   useEffect(() => {
     loadLakes();
   }, []);
 
-  function getFish(lake) {}
-
-  function isoFish(res) {
-    console.log(res);
+  function getFish(res) {
+    console.log(res.data[0].fish);
+    setFishState(res.data[0].fish);
   }
 
   function loadLakes() {
     API.getLakes()
       .then((res) => {
         setLakeState(res);
-        isoFish(res);
+        setFishState(res.data[0].fish);
+        getFish(res);
       })
       .catch((err) => console.log(err));
   }
