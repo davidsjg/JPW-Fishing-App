@@ -2,7 +2,9 @@ import React from "react";
 import Row from "../Row/Row";
 import Col from "../Col/Col";
 import Contain from "../Contain/Contain";
+import DropdownCard from "../DropdownCard/DropdownCard";
 import Card from "../Card/Card";
+import Br from "../Br/Br";
 
 import styles from "./LakeContainer.module.css";
 import DropdownBar from "../Dropdown/DropdownBar";
@@ -19,12 +21,20 @@ export default function LakeContainer() {
     <Contain>
       <Row>
         <Col size="md-3"></Col>
-        <Col
-          className={styles["colClass"]}
-          style={{ alignItems: "center" }}
-          size="md-6"
-        >
-          <Card />
+        <Col size="md-6">
+          <DropdownCard />
+        </Col>
+        <Col size="md-3"></Col>
+      </Row>
+      <Row>
+        <Col size="md-3"></Col>
+        <Col size="md-6">
+          <Br />
+          <Br />
+          <Br />
+          <Br />
+          <Br />
+          <Br />
         </Col>
         <Col size="md-3"></Col>
       </Row>

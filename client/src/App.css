@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.imageDiv {
+  background-image: url("https://bloximages.newyork1.vip.townnews.com/outtherecolorado.com/content/tncms/assets/v3/editorial/d/c5/dc5add81-cb11-5d31-aec3-57b498a905df/5eece0839be47.image.jpg?resize=1600%2C1200");
+}
