@@ -11,10 +11,6 @@ import { STATES } from "mongoose";
 function App() {
   //empty array as second parameter means it only runs once
 
-  const tempObject = {
-    lake: "Heart Lake",
-  };
-
   const [lakeState, setLakeState] = useState({
     lake: {},
     fish: ["Cutthroat"],

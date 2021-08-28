@@ -22,7 +22,7 @@ export default function NavigationBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Navbar.Collapse>
-                <Nav.Link className={styles["navColor"]} href="#home">
+                <Nav.Link className={styles["dividerLink"]} href="#home">
                   Home
                 </Nav.Link>
                 <Nav.Link className={styles["navColor"]} href="#home">
@@ -36,7 +36,7 @@ export default function NavigationBar() {
           </Col>
           <Col size="md-4">
             <Navbar.Collapse className="justify-content-end">
-              <Nav.Link className={styles["navColor"]} href="#home">
+              <Nav.Link className={styles["dividerLink"]} href="#home">
                 Login
               </Nav.Link>
               <Nav.Link className={styles["navColor"]} href="#home">

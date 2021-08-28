@@ -21,3 +21,9 @@
     "Lucida Sans", Arial, sans-serif;
   margin-bottom: 15px;
 }
+
+.dividerLink {
+  border-right: 1px solid;
+  color: black;
+  /* border-width: 1px; */
+}
