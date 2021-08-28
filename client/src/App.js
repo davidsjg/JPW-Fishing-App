@@ -17,6 +17,7 @@ function App() {
 
   useEffect(() => {
     loadLakes();
+    getLakeNames();
   }, []);
 
   function loadLakes() {
@@ -28,6 +29,8 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
+
+  function getLakeNames() {}
 
   return (
     <LakeContext.Provider value={lakeState}>
