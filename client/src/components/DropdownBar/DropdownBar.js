@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import styles from "./DropdownBar.module.css";
+import LakeContext from "../../utils/LakeContext";
 
 export default function DropdownBar() {
+  const { lake, fish } = useContext(LakeContext);
+  console.log(lake);
+  console.log(fish);
+
   return (
     <Dropdown className={styles["center1"]}>
       <Dropdown.Toggle

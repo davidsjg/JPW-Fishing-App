@@ -7,7 +7,7 @@ import Card from "../Card/Card";
 import Br from "../Br/Br";
 
 import styles from "./LakeContainer.module.css";
-import DropdownBar from "../Dropdown/DropdownBar";
+import DropdownBar from "../DropdownBar/DropdownBar";
 
 // import { StyleSheet, Text, View } from 'react-native'
 
@@ -28,14 +28,7 @@ export default function LakeContainer() {
       </Row>
       <Row>
         <Col size="md-3"></Col>
-        <Col size="md-6">
-          <Br />
-          <Br />
-          <Br />
-          <Br />
-          <Br />
-          <Br />
-        </Col>
+        <Col size="md-6"></Col>
         <Col size="md-3"></Col>
       </Row>
     </Contain>

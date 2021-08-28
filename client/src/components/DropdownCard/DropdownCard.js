@@ -1,5 +1,5 @@
 import React from "react";
-import DropdownBar from "../Dropdown/DropdownBar";
+import DropdownBar from "../DropdownBar/DropdownBar";
 import styles from "./DropdownCard.module.css";
 // import { StyleSheet } from "react-native";
 
