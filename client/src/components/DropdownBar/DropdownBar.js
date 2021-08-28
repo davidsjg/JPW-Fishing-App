@@ -6,7 +6,10 @@ import LakeContext from "../../utils/LakeContext";
 
 export default function DropdownBar() {
   const { lake, fish } = useContext(LakeContext);
-  console.log(lake);
+  // let lakeData = lake.data;
+
+  let arrTest = ["dog", "cat", "bird", "slap", "fuckbirds"];
+
   console.log(fish);
 
   return (
@@ -20,9 +23,11 @@ export default function DropdownBar() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu style={{ width: "100%" }} className={styles["ddBar"]}>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        {arrTest.map((thing) => (
+          <Dropdown.Item value={thing} href="#/action-1">
+            {thing}
+          </Dropdown.Item>
+        ))}
       </Dropdown.Menu>
     </Dropdown>
   );
