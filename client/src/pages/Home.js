@@ -9,8 +9,6 @@ function Home() {
 
   const { lake } = useContext(LakeContext);
 
-  console.log(lake);
-
   return <LakeContainer />;
 }
 

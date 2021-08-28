@@ -6,7 +6,6 @@ import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Contain from "./components/Contain/Contain";
 import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
-import { STATES } from "mongoose";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -15,7 +14,6 @@ function App() {
     lake: {},
     fish: ["Cutthroat"],
   });
-  console.log(lakeState);
 
   useEffect(() => {
     loadLakes();
