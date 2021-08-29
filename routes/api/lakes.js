@@ -6,6 +6,8 @@ router.route("/").get(lakeController.findAll);
 //   .post(destinationController.create)
 //   .put(destinationController.update);
 
+// router.route("/:name").get(lakeController.findByName);
+
 // Matches with "/api/cities/:id"
 // router
 //   .route("/:id")

@@ -16,21 +16,36 @@ function App() {
   });
 
   useEffect(() => {
+    let name = "name";
     loadLakes();
-    getLakeNames();
+    // getLakeNames(name);
   }, []);
+
+  console.log(lakeState);
 
   function loadLakes() {
     API.getLakes()
       .then((lake) => {
         let fish = lake.data[0].fish;
         setLakeState({ lake, fish });
+        console.log(lake.data);
+
+        //need to map over data
+        var obj = lake.data;
+
+        console.log(lake.data[0].lake);
+
         // getFish(lake);
       })
       .catch((err) => console.log(err));
   }
 
-  function getLakeNames() {}
+  // function getLakeNames(name) {
+  //   let tempArr = [];
+  //   API.getLakeNames(name).then((data) => {
+  //     console.log(data);
+  //   });
+  // }
 
   return (
     <LakeContext.Provider value={lakeState}>
