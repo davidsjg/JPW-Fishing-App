@@ -3,10 +3,10 @@ import DropdownBar from "../DropdownBar/DropdownBar";
 import styles from "./DropdownCard.module.css";
 // import { StyleSheet } from "react-native";
 
-export default function DropdownCard(props) {
+export default function DropdownCard() {
   return (
     <div className="card text-center" className={styles["myCard"]}>
-      <DropdownBar id={styles["ddBar"]} />
+      <DropdownBar id={styles["ddBar1"]} />
     </div>
   );
 }

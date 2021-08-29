@@ -19,9 +19,7 @@ function App() {
   console.log(lakeState);
 
   useEffect(() => {
-    let name = "name";
     loadLakes();
-    // getLakeNames(name);
   }, []);
 
   function loadLakes() {
@@ -29,25 +27,20 @@ function App() {
       .then((lake) => {
         let fish = lake.data[0].fish;
 
-        let lakeNomers = [];
+        let lakeNames = [];
 
         lake.data.map((lake) => {
-          lakeNomers.push(lake.lake);
+          lakeNames.push(lake.lake);
         });
 
-        setLakeState({ lake, fish, lakeNomers });
+        setLakeState({ lake, fish, lakeNames });
 
         // getFish(lake);
       })
       .catch((err) => console.log(err));
   }
 
-  // function getLakeNames(name) {
-  //   let tempArr = [];
-  //   API.getLakeNames(name).then((data) => {
-  //     console.log(data);
-  //   });
-  // }
+  console.log(lakeState.lakeNames);
 
   return (
     <LakeContext.Provider value={lakeState}>

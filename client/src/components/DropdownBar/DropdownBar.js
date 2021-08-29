@@ -1,29 +1,16 @@
 import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import styles from "./DropdownBar.module.css";
 import LakeContext from "../../utils/LakeContext";
-import DropBar from "../DropBar/DropBar";
 
 export default function DropdownBar() {
-  const { lake, fish } = useContext(LakeContext);
-  // let lakeData = lake.data;
-  // <Dropdown.Menu style={{ width: "100%" }} className={styles["ddBar"]}>
-  // {arrTest.map((thing) => (
-  //   <Dropdown.Item value={thing} href="#/action-1">
-  //     {thing}
-  //   </Dropdown.Item>
-  // ))}
+  const { lake, fish, lakeNames } = useContext(LakeContext);
+  console.log(lakeNames);
+  console.log(lake);
+  console.log(fish);
 
-  // {lake.data.map((name) => {
-  //   return ( lake.data.length ? (
-  //     <Dropdown.Item value={name} href="#/action-1">
-  //       {name}
-  //     </Dropdown.Item>
-  //   ) : (
-  //     <h3>You haven't added any favorites yet!</h3>
-  //   )
-  //   )
+  // {lakeNames.map((name, id) => {
+  //   return <Dropdown.Item href="#/action">{name}</Dropdown.Item>;
   // })}
 
   return (
@@ -35,9 +22,10 @@ export default function DropdownBar() {
       >
         SELECT A LAKE!
       </Dropdown.Toggle>
-      <Dropdown.Menu style={{ width: "100%" }} className={styles["ddBar"]}>
-        <DropBar />
-      </Dropdown.Menu>
+      <Dropdown.Menu
+        style={{ width: "100%" }}
+        className={styles["ddBar"]}
+      ></Dropdown.Menu>
     </Dropdown>
   );
 }
