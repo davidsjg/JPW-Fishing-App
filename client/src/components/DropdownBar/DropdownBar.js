@@ -26,8 +26,6 @@ export default function DropdownBar() {
   //   )
   // })}
 
-  console.log(lake.data);
-
   return (
     <Dropdown className={styles["center1"]}>
       <Dropdown.Toggle
