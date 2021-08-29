@@ -35,7 +35,7 @@ function App() {
           lakeNomers.push(lake.lake);
         });
 
-        setLakeState({ lake, fish });
+        setLakeState({ lake, fish, lakeNomers });
 
         // getFish(lake);
       })
