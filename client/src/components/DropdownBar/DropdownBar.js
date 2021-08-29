@@ -5,9 +5,6 @@ import LakeContext from "../../utils/LakeContext";
 
 export default function DropdownBar() {
   const { lake, fish, lakeNames } = useContext(LakeContext);
-  console.log(lakeNames);
-  console.log(lake);
-  console.log(fish);
 
   // {lakeNames.map((name, id) => {
   //   return <Dropdown.Item href="#/action">{name}</Dropdown.Item>;
@@ -22,10 +19,11 @@ export default function DropdownBar() {
       >
         SELECT A LAKE!
       </Dropdown.Toggle>
-      <Dropdown.Menu
-        style={{ width: "100%" }}
-        className={styles["ddBar"]}
-      ></Dropdown.Menu>
+      <Dropdown.Menu style={{ width: "100%" }} className={styles["ddBar"]}>
+        {lakeNames.map((lakeName) => {
+          return <Dropdown.Item href={lake.id}>{lakeName}</Dropdown.Item>;
+        })}
+      </Dropdown.Menu>
     </Dropdown>
   );
 }
