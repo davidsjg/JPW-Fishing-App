@@ -5,8 +5,6 @@ import LakeContainer from "../components/LakeContainer/LakeContainer";
 function Home(props) {
   //by calling useState, it gives us access two fishState and setFishState that we are destructuring from an array
 
-  console.log(props);
-
   return <LakeContainer props={props} />;
 }
 

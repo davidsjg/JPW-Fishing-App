@@ -11,11 +11,10 @@ export default function DropdownBar(props) {
   const { lake, fish, lakeNames } = useContext(LakeContext);
 
   let currLakeState = props.props.props.props.setSingleLake;
-  console.log(currLakeState);
+
+  let selectedLake = "";
 
   function handleSelect(e) {
-    let selectedLake = "";
-
     let newLakeData = lakeNames.filter((lake) => lake === e);
 
     let lakeData = lakeNames.find((lake) => {
@@ -27,6 +26,24 @@ export default function DropdownBar(props) {
     });
     console.log(selectedLake);
     currLakeState(selectedLake);
+    newFunction();
+  }
+
+  function newFunction() {
+    var found = lakeNames.find(function (data, index) {
+      if (data.lake === selectedLake) return true;
+    });
+    getLake();
+  }
+
+  function getLake() {
+    console.log(lake.data[0].lake);
+
+    var newFound = lake.data.find(function (data, index) {
+      if ((lake.data[0].lake = selectedLake)) return true;
+    });
+
+    return console.log(newFound);
   }
 
   return (

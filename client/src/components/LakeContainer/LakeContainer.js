@@ -10,7 +10,6 @@ import styles from "./LakeContainer.module.css";
 import DropdownBar from "../DropdownBar/DropdownBar";
 
 export default function LakeContainer(props) {
-  console.log(props);
   return (
     <Contain>
       <Row>
