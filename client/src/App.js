@@ -20,9 +20,17 @@ function App() {
     selectedLake: {},
   });
 
+  console.log(lakeState);
+
+  let hello = "HELLO BRAH";
+
   useEffect(() => {
     loadLakes();
   }, []);
+
+  function setCurrentLake(selectedLake) {
+    setLakeState({ ...lakeState, selectedLake });
+  }
 
   function loadLakes() {
     API.getLakes()
@@ -48,7 +56,11 @@ function App() {
         <Contain>
           <NavigationBar />
           <Switch>
-            <Route exact path={"/"} component={Home} />
+            <Route
+              exact
+              path={"/"}
+              component={() => <Home setSingleLake={setCurrentLake} />}
+            />
             <Route exact path={"/lakes"} component={Lakes} />
             <Route exact path={"/:id"} component={SelectedLake} />
           </Switch>

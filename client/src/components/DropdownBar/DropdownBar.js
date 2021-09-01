@@ -7,28 +7,26 @@ import LakeContext from "../../utils/LakeContext";
 import Form from "react-bootstrap/Form";
 import { Alert, MenuItem } from "bootstrap";
 
-export default function DropdownBar() {
+export default function DropdownBar(props) {
   const { lake, fish, lakeNames } = useContext(LakeContext);
 
+  let currLakeState = props.props.props.props.setSingleLake;
+  console.log(currLakeState);
+
   function handleSelect(e) {
-    // what am I suppose to write in there to get the value?
+    let selectedLake = "";
 
-    let temp = ["horse", "loose", "hospital course"];
-    console.log(temp);
+    let newLakeData = lakeNames.filter((lake) => lake === e);
 
-    let newVal = temp.find((word) => {
-      return word === "hospital course";
-    });
-
-    console.log(newVal);
-    console.log(lakeNames);
-
-    alert(e);
     let lakeData = lakeNames.find((lake) => {
-      console.log(e);
-      return lake === e;
+      let newLakeData = lakeNames.filter((lake) => lake === e);
+
+      selectedLake = newLakeData.join();
+
+      return newLakeData === e;
     });
-    console.log(lakeData);
+    console.log(selectedLake);
+    currLakeState(selectedLake);
   }
 
   return (

@@ -9,20 +9,14 @@ import Br from "../Br/Br";
 import styles from "./LakeContainer.module.css";
 import DropdownBar from "../DropdownBar/DropdownBar";
 
-// import { StyleSheet, Text, View } from 'react-native'
-
-function handleInputChange(event) {
-  const { name, value } = event.target;
-  console.log(name, value);
-}
-
-export default function LakeContainer() {
+export default function LakeContainer(props) {
+  console.log(props);
   return (
     <Contain>
       <Row>
         <Col size="md-3"></Col>
         <Col size="md-6">
-          <DropdownCard />
+          <DropdownCard props={props} />
         </Col>
         <Col size="md-3"></Col>
       </Row>
