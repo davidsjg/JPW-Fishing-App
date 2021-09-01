@@ -2,6 +2,11 @@
   width: ;
 } */
 
-.center1 {
-  text-align: center;
+.center2 {
+  background-color: grey;
+  color: white;
+}
+
+.wtf {
+  background-color: red;
 }
