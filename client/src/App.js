@@ -8,6 +8,7 @@ import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
 import Lakes from "./pages/Lakes";
 import SelectedLake from "./pages/SelectedLake";
+import LakeContainer from "./components/LakeContainer/LakeContainer";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -46,14 +47,12 @@ function App() {
     <LakeContext.Provider value={lakeState}>
       <Router>
         <Contain>
-          <div className="imageDiv">
-            <NavigationBar />
-            <Switch>
-              <Route exact path={"/"} component={Home} />
-              <Route exact path={"/lakes"} component={Lakes} />
-              <Route exact path={"/lakes/:id"} component={SelectedLake} />
-            </Switch>
-          </div>
+          <NavigationBar />
+          <Switch>
+            <Route exact path={"/"} component={Home} />
+            <Route exact path={"/lakes"} component={Lakes} />
+            <Route exact path={"/:id"} component={SelectedLake} />
+          </Switch>
         </Contain>
       </Router>
     </LakeContext.Provider>

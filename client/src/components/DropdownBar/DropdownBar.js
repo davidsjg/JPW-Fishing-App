@@ -1,42 +1,54 @@
 import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+// import MenuItem from "react-bootstrap/MenuItem";
 import styles from "./DropdownBar.module.css";
 import LakeContext from "../../utils/LakeContext";
 import Form from "react-bootstrap/Form";
+import { Alert, MenuItem } from "bootstrap";
 
 export default function DropdownBar() {
   const { lake, fish, lakeNames } = useContext(LakeContext);
 
-  function handleSelect(lake) {
-    console.log(lake);
+  function handleSelect(e) {
+    // what am I suppose to write in there to get the value?
+    alert(e);
   }
 
   return (
-    <Dropdown className={styles["center1"]}>
-      <Dropdown.Toggle
-        style={{ width: "100%" }}
-        variant="secondary"
-        id="dropdown-basic"
+    <>
+      <Dropdown
+        onSelect={function (evt) {
+          console.log(evt);
+        }}
+        className={styles["center1"]}
       >
-        SELECT A LAKE!
-      </Dropdown.Toggle>
-      <Dropdown.Menu
-        onSelect={handleSelect("heart")}
-        style={{ width: "100%" }}
-        className={styles["ddBar"]}
-      >
-        {lakeNames.map((lakeName) => {
-          return (
-            <Dropdown.Item
-              href={`/lakes/${lakeName.replace(/\s/g, "")}`}
-              // href={"lakes:" + lakeName}
-            >
-              {lakeName}
-            </Dropdown.Item>
-          );
-        })}
-      </Dropdown.Menu>
-    </Dropdown>
+        <Dropdown.Toggle
+          style={{ width: "100%" }}
+          variant="secondary"
+          id="dropdown-basic"
+        >
+          SELECT A LAKE!
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          style={{ width: "100%" }}
+          className={styles["ddBar"]}
+          onSelect={handleSelect}
+        >
+          {lakeNames.map((lakeName) => {
+            return (
+              <Dropdown.Item
+                href={`/${lakeName.replace(/\s/g, "")}`}
+                // href={"lakes:" + lakeName}
+                eventKey={lakeName}
+              >
+                {lakeName}
+              </Dropdown.Item>
+            );
+          })}
+        </Dropdown.Menu>
+      </Dropdown>
+    </>
   );
 }
 
