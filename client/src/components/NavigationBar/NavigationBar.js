@@ -22,10 +22,10 @@ export default function NavigationBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Navbar.Collapse>
-                <Nav.Link className={styles["dividerLink"]} href="#home">
+                <Nav.Link className={styles["dividerLink"]} href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className={styles["navColor"]} href="#home">
+                <Nav.Link className={styles["navColor"]} href="/lakes">
                   Lakes
                 </Nav.Link>
               </Navbar.Collapse>
