@@ -43,6 +43,8 @@ export default function DropdownBar(props) {
       if ((lake.data[0].lake = selectedLake)) return true;
     });
 
+    currLakeState(newFound);
+
     return console.log(newFound);
   }
 
