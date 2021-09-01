@@ -6,6 +6,7 @@ import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Contain from "./components/Contain/Contain";
 import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
+import Lakes from "./pages/Lakes";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -54,7 +55,7 @@ function App() {
               </Route>
               <Route exact path={"/lakes"}>
                 <div>
-                  <Home />
+                  <Lakes />
                 </div>
               </Route>
             </Switch>
