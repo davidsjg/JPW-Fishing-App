@@ -17,7 +17,10 @@ function App() {
     lake: {},
     fish: ["Cutthroat"],
     lakeNames: ["Heart"],
+    selectedLake: {},
   });
+
+  console.log(lakeState);
 
   useEffect(() => {
     loadLakes();

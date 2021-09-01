@@ -4,6 +4,7 @@ const LakeContext = React.createContext({
   lake: {},
   fish: [],
   lakeNames: [],
+  selectedLake: {},
 });
 
 // const LakeConsumer = LakeContext.Consumer;
