@@ -7,6 +7,7 @@ import Contain from "./components/Contain/Contain";
 import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
 import Lakes from "./pages/Lakes";
+import SelectedLake from "./pages/SelectedLake";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -48,16 +49,9 @@ function App() {
           <div className="imageDiv">
             <NavigationBar />
             <Switch>
-              <Route exact path={"/"}>
-                <div>
-                  <Home />
-                </div>
-              </Route>
-              <Route exact path={"/lakes"}>
-                <div>
-                  <Lakes />
-                </div>
-              </Route>
+              <Route exact path={"/"} component={Home} />
+              <Route exact path={"/lakes"} component={Lakes} />
+              <Route exact path={"/lakes/:id"} component={SelectedLake} />
             </Switch>
           </div>
         </Contain>

@@ -28,7 +28,7 @@ export default function DropdownBar() {
         {lakeNames.map((lakeName) => {
           return (
             <Dropdown.Item
-              href={`/lakes/:${lakeName.replace(/\s/g, "")}`}
+              href={`/lakes/${lakeName.replace(/\s/g, "")}`}
               // href={"lakes:" + lakeName}
             >
               {lakeName}
