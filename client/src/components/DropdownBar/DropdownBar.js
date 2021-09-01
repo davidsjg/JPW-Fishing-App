@@ -12,17 +12,28 @@ export default function DropdownBar() {
 
   function handleSelect(e) {
     // what am I suppose to write in there to get the value?
+
+    let temp = ["horse", "loose", "hospital course"];
+    console.log(temp);
+
+    let newVal = temp.find((word) => {
+      return word === "hospital course";
+    });
+
+    console.log(newVal);
+    console.log(lakeNames);
+
     alert(e);
+    let lakeData = lakeNames.find((lake) => {
+      console.log(e);
+      return lake === e;
+    });
+    console.log(lakeData);
   }
 
   return (
     <>
-      <Dropdown
-        onSelect={function (evt) {
-          console.log(evt);
-        }}
-        className={styles["center1"]}
-      >
+      <Dropdown onSelect={handleSelect} className={styles["center1"]}>
         <Dropdown.Toggle
           style={{ width: "100%" }}
           variant="secondary"
@@ -38,7 +49,6 @@ export default function DropdownBar() {
           {lakeNames.map((lakeName) => {
             return (
               <Dropdown.Item
-                href={`/${lakeName.replace(/\s/g, "")}`}
                 // href={"lakes:" + lakeName}
                 eventKey={lakeName}
               >

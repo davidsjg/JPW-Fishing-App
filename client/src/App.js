@@ -20,8 +20,6 @@ function App() {
     selectedLake: {},
   });
 
-  console.log(lakeState);
-
   useEffect(() => {
     loadLakes();
   }, []);
@@ -43,8 +41,6 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
-
-  console.log(lakeState.lakeNames);
 
   return (
     <LakeContext.Provider value={lakeState}>
