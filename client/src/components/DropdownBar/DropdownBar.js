@@ -26,7 +26,7 @@ export default function DropdownBar(props) {
       return newLakeData === e;
     });
     console.log(selectedLake);
-    currLakeState(selectedLake);
+    // currLakeState(selectedLake);
     newFunction();
   }
 
@@ -42,8 +42,9 @@ export default function DropdownBar(props) {
       if ((lake.data[0].lake = selectedLake)) return true;
     });
 
-    currLakeState(newFound);
-    console.log(newFound.fish);
+    let selectedFish = newFound.fish;
+
+    currLakeState(newFound, selectedFish);
 
     return console.log(newFound);
   }

@@ -28,8 +28,8 @@ function App() {
     loadLakes();
   }, []);
 
-  function setCurrentLake(selectedLake) {
-    setLakeState({ ...lakeState, selectedLake });
+  function setCurrentLake(selectedLake, fish) {
+    setLakeState({ ...lakeState, fish, selectedLake });
   }
 
   function setFishArray(fish) {
