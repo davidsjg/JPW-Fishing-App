@@ -4,7 +4,6 @@ const LakeContext = React.createContext({
   lake: {},
   fish: [],
   lakeNames: [],
-  setLakeState: () => {},
   selectedLake: {},
 });
 

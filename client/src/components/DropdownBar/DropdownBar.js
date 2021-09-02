@@ -67,11 +67,7 @@ export default function DropdownBar(props) {
         >
           {lakeNames.map((lakeName) => {
             return (
-              <Dropdown.Item
-                // href={"lakes:" + lakeName}
-                eventKey={lakeName}
-                // href={"/" + lakeName}
-              >
+              <Dropdown.Item eventKey={lakeName} href={"/" + lakeName}>
                 {lakeName}
               </Dropdown.Item>
             );

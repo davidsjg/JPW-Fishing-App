@@ -5,7 +5,9 @@ import LakeContext from "../../utils/LakeContext";
 export default function LakeCard() {
   const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
 
-  console.log(lake, fish, lakeNames, selectedLake);
+  console.log(selectedLake);
+
+  let lakeImage = selectedLake.lake;
 
   return (
     <Card style={{ width: "18rem" }}>

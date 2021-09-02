@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
@@ -7,8 +7,7 @@ import Contain from "./components/Contain/Contain";
 import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
 import Lakes from "./pages/Lakes";
-import SelectedLake from "./pages/SelectedLake";
-import LakeContainer from "./components/LakeContainer/LakeContainer";
+import LakeData from "./pages/LakeData";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -22,15 +21,14 @@ function App() {
 
   console.log(lakeState);
 
-  let hello = "HELLO BRAH";
-
   useEffect(() => {
     loadLakes();
   }, []);
 
-  // function setCurrentLake(selectedLake) {
-  //   setLakeState({ ...lakeState, selectedLake });
-  // }
+  function setCurrentLake(selectedLake) {
+    setLakeState({ selectedLake });
+    localStorage.setItem("lakeState", JSON.stringify(lakeState));
+  }
 
   function setFishArray(fish, selectedLake) {
     setLakeState({ ...lakeState, fish, selectedLake });
@@ -42,12 +40,13 @@ function App() {
         let fish = lake.data[0].fish;
 
         let lakeNames = [];
+        let selectedLake = lake.data[0];
 
         lake.data.map((lake) => {
           lakeNames.push(lake.lake);
         });
 
-        setLakeState({ ...lakeState, lake, fish, lakeNames });
+        setLakeState({ lake, fish, lakeNames, selectedLake });
 
         // getFish(lake);
       })
@@ -63,15 +62,18 @@ function App() {
             <Route
               exact
               path={"/"}
-              component={() => (
-                <Home
-                  // setSingleLake={setCurrentLake}
-                  setFishArray={setFishArray}
-                />
+              render={(props) => (
+                <Home {...props} setFishArray={setFishArray} />
               )}
             />
-            <Route exact path={"/lakes"} component={Lakes} />
-            <Route exact path={"/:lake"} component={SelectedLake} />
+            <Route path={"/lakes"} component={Lakes} />
+            <Route
+              exact
+              path={"/:lake"}
+              render={(props) => (
+                <LakeData {...props} setCurrentLake={setCurrentLake} />
+              )}
+            />
           </Switch>
         </Contain>
       </Router>
