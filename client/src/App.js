@@ -32,6 +32,10 @@ function App() {
     setLakeState({ ...lakeState, selectedLake });
   }
 
+  function setFishArray(fish) {
+    setLakeState({ ...lakeState, fish });
+  }
+
   function loadLakes() {
     API.getLakes()
       .then((lake) => {
@@ -59,7 +63,12 @@ function App() {
             <Route
               exact
               path={"/"}
-              component={() => <Home setSingleLake={setCurrentLake} />}
+              component={() => (
+                <Home
+                  setFishArray={setFishArray}
+                  setSingleLake={setCurrentLake}
+                />
+              )}
             />
             <Route exact path={"/lakes"} component={Lakes} />
             <Route exact path={"/:lake"} component={SelectedLake} />

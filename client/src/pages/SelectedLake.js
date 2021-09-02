@@ -6,22 +6,17 @@ import Row from "../components/Row/Row";
 import LakeContext from "../utils/LakeContext";
 
 export default function Lakes() {
-  const { lake, fish, lakeNames } = useContext(LakeContext);
+  const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
 
   console.log(lake);
 
   return (
     <Contain>
       <Row>
-        <Col size="md-6">1of3</Col>
-        <Col size="md-6">2of3</Col>
-      </Row>
-      <Row>
-        <Col size="md-3">1</Col>
-        <Col size="md-6">
-          <ContainTest />
-        </Col>
-        <Col size="md-3">3</Col>
+        <Col size="md-3">1of3</Col>
+        <Row />
+        <Row />
+        <Col size="md-9">2of3</Col>
       </Row>
     </Contain>
   );

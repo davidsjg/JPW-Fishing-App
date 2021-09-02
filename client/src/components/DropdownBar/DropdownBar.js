@@ -11,6 +11,7 @@ export default function DropdownBar(props) {
   const { lake, fish, lakeNames } = useContext(LakeContext);
 
   let currLakeState = props.props.props.props.setSingleLake;
+  let currFishState = props.props.props.props.setFishArray;
 
   let selectedLake = "";
 
@@ -37,13 +38,12 @@ export default function DropdownBar(props) {
   }
 
   function getLake() {
-    console.log(lake.data[0].lake);
-
     var newFound = lake.data.find(function (data, index) {
       if ((lake.data[0].lake = selectedLake)) return true;
     });
 
     currLakeState(newFound);
+    console.log(newFound.fish);
 
     return console.log(newFound);
   }
@@ -68,7 +68,7 @@ export default function DropdownBar(props) {
               <Dropdown.Item
                 // href={"lakes:" + lakeName}
                 eventKey={lakeName}
-                href={"/" + lakeName}
+                // href={"/" + lakeName}
               >
                 {lakeName}
               </Dropdown.Item>
