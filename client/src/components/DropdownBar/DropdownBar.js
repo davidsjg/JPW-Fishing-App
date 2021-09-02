@@ -8,12 +8,11 @@ import Form from "react-bootstrap/Form";
 import { Alert, MenuItem } from "bootstrap";
 
 export default function DropdownBar(props) {
-  const { lake, fish, lakeNames } = useContext(LakeContext);
+  const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
 
-  let currLakeState = props.props.props.props.setSingleLake;
   let currFishState = props.props.props.props.setFishArray;
 
-  let selectedLake = "";
+  let lakeSelect = "";
 
   function handleSelect(e) {
     let newLakeData = lakeNames.filter((lake) => lake === e);
@@ -21,30 +20,32 @@ export default function DropdownBar(props) {
     let lakeData = lakeNames.find((lake) => {
       let newLakeData = lakeNames.filter((lake) => lake === e);
 
-      selectedLake = newLakeData.join();
+      lakeSelect = newLakeData.join();
 
       return newLakeData === e;
     });
-    console.log(selectedLake);
-    // currLakeState(selectedLake);
+    console.log(lakeSelect);
+
     newFunction();
   }
 
   function newFunction() {
     var found = lakeNames.find(function (data, index) {
-      if (data.lake === selectedLake) return true;
+      if (data.lake === lakeSelect) return true;
     });
     getLake();
   }
 
   function getLake() {
     var newFound = lake.data.find(function (data, index) {
-      if ((lake.data[0].lake = selectedLake)) return true;
+      if ((lake.data[0].lake = lakeSelect)) return true;
     });
 
     let selectedFish = newFound.fish;
+    console.log(newFound);
 
-    currLakeState(newFound, selectedFish);
+    // currLakeState(newFound);
+    currFishState(selectedFish, newFound);
 
     return console.log(newFound);
   }

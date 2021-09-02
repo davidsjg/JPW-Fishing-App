@@ -28,12 +28,12 @@ function App() {
     loadLakes();
   }, []);
 
-  function setCurrentLake(selectedLake, fish) {
-    setLakeState({ ...lakeState, fish, selectedLake });
-  }
+  // function setCurrentLake(selectedLake) {
+  //   setLakeState({ ...lakeState, selectedLake });
+  // }
 
-  function setFishArray(fish) {
-    setLakeState({ ...lakeState, fish });
+  function setFishArray(fish, selectedLake) {
+    setLakeState({ ...lakeState, fish, selectedLake });
   }
 
   function loadLakes() {
@@ -47,7 +47,7 @@ function App() {
           lakeNames.push(lake.lake);
         });
 
-        setLakeState({ lake, fish, lakeNames });
+        setLakeState({ ...lakeState, lake, fish, lakeNames });
 
         // getFish(lake);
       })
@@ -65,8 +65,8 @@ function App() {
               path={"/"}
               component={() => (
                 <Home
+                  // setSingleLake={setCurrentLake}
                   setFishArray={setFishArray}
-                  setSingleLake={setCurrentLake}
                 />
               )}
             />
