@@ -62,7 +62,7 @@ function App() {
               component={() => <Home setSingleLake={setCurrentLake} />}
             />
             <Route exact path={"/lakes"} component={Lakes} />
-            <Route exact path={"/:id"} component={SelectedLake} />
+            <Route exact path={"/:lake"} component={SelectedLake} />
           </Switch>
         </Contain>
       </Router>

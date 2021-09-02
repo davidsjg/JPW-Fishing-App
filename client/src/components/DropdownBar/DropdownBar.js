@@ -68,6 +68,7 @@ export default function DropdownBar(props) {
               <Dropdown.Item
                 // href={"lakes:" + lakeName}
                 eventKey={lakeName}
+                href={"/" + lakeName}
               >
                 {lakeName}
               </Dropdown.Item>
@@ -78,31 +79,3 @@ export default function DropdownBar(props) {
     </>
   );
 }
-
-// return (
-//   <Dropdown className={styles["center1"]}>
-//     <Dropdown.Toggle
-//       style={{ width: "100%" }}
-//       variant="secondary"
-//       id="dropdown-basic"
-//     >
-//       SELECT A LAKE!
-//     </Dropdown.Toggle>
-//     <Dropdown.Menu
-//       onSelect={handleSelect("heart")}
-//       style={{ width: "100%" }}
-//       className={styles["ddBar"]}
-//     >
-// {lakeNames.map((lakeName) => {
-//   return (
-//     <Dropdown.Item
-//       value={lakeName}
-//       // href={"lakes:" + lakeName}
-//     >
-//       {lakeName}
-//     </Dropdown.Item>
-//   );
-// })}
-//     </Dropdown.Menu>
-//   </Dropdown>
-// );
