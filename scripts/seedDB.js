@@ -24,6 +24,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 10,
+    img: "https://i.imgur.com/7Ur4Wbc.png",
   },
   {
     lake: "Crater Lake - Mid-North",
@@ -44,6 +45,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 8,
+    img: "https://i.imgur.com/HMZ4YHm.jpg",
   },
   {
     lake: "Crater Lake - Mid-South",
@@ -63,6 +65,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 6,
+    img: "https://i.imgur.com/aBidlhP.jpg",
   },
   {
     lake: "Crater Lake - Upper",
@@ -82,6 +85,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 11,
+    img: "https://i.imgur.com/0rx1Hwy.jpg",
   },
   {
     lake: "Clayton Lake",
@@ -101,6 +105,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 11,
+    img: "https://protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20valley%20tarn.jpg",
   },
   {
     lake: "Forest Lake #1",
@@ -120,6 +125,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 6,
+    img: "https://cdn-assets.alltrails.com/uploads/photo/image/39972598/extra_large_a08e572c3e9bb9e65c08d71ecb257486.jpg",
   },
   {
     lake: "Forest Lake #3",
@@ -139,6 +145,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 6,
+    img: "https://i.imgur.com/kujnz8E.jpg",
   },
   {
     lake: "Heart Lake",
@@ -158,6 +165,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 12,
+    img: "https://i.imgur.com/WvcNsBX.jpg",
   },
   {
     lake: "Iceberg North",
@@ -177,6 +185,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 15,
+    img: "https://cdn2.apstatic.com/photos/hike/7059263_medium_1559875445.jpg",
   },
   {
     lake: "Iceberg South",
@@ -196,6 +205,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 15,
+    img: "https://www.protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20first%20icy%20lake%20550.jpg",
   },
   {
     lake: "James Peak Lake",
@@ -215,6 +225,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 15,
+    img: "https://cdn-assets.alltrails.com/uploads/photo/image/19174780/extra_large_7d0fe888c28b31d3d992fc1d34de51c6.jpg",
   },
   {
     lake: "Jenny Lake",
@@ -234,6 +245,7 @@ const lakeSeed = [
     rainbow: true,
     lakeTrout: false,
     distance: 14,
+    img: "https://i.imgur.com/OR12Ylf.jpg",
   },
   {
     lake: "Little Echo Lake",
@@ -253,6 +265,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: true,
     distance: 14,
+    img: "http://www.craigfagerness.com/images/DSC09893.JPG",
   },
   {
     lake: "Lost Lake",
@@ -272,6 +285,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 14,
+    img: "https://dayhikesneardenver.com/wp-content/uploads/2017/09/lost-lake-near-nederland-cc-bfagan.jpg",
   },
   {
     lake: "Roger's Pass Lake",
@@ -291,6 +305,7 @@ const lakeSeed = [
     rainbow: false,
     lakeTrout: false,
     distance: 13,
+    img: "https://www.protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20rogers%20peak%20lake%20morning%20550.jpg",
   },
 ];
 
