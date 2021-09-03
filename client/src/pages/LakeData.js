@@ -8,21 +8,21 @@ import LakeContext from "../utils/LakeContext";
 export default function Lakes(props) {
   const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
 
-  let currLakeState = localStorage.getItem("lakeState");
+  let localState = localStorage.getItem("lakeState");
 
-  // console.log(props.setCurrentLake);
+  console.log(localState);
 
-  // let updateState = props.setCurrentLake;
+  let lakeData = lake.data;
 
-  // let currLake = JSON.parse(currLakeState);
+  console.log(lakeData);
 
-  // useEffect(() => {
-  //   updateState(currLake);
-  // }, []);
+  let newLakeData;
 
-  // console.log(selectedLake);
+  lake.data
+    ? (newLakeData = lakeData.filter((data) => data.lake === localState))
+    : console.log("no data yet");
 
-  console.log(currLakeState);
+  console.log(newLakeData);
 
   return (
     <Contain>

@@ -19,7 +19,7 @@ function App() {
     selectedLake: {},
   });
 
-  console.log(lakeState);
+  console.log(lakeState.selectedLake.lake);
 
   useEffect(() => {
     loadLakes();
@@ -27,11 +27,13 @@ function App() {
 
   function setCurrentLake(selectedLake) {
     setLakeState({ selectedLake });
-    localStorage.setItem("lakeState", JSON.stringify(lakeState));
+
+    localStorage.setItem("lakeState", selectedLake.lake);
   }
 
   function setFishArray(fish, selectedLake) {
     setLakeState({ ...lakeState, fish, selectedLake });
+    localStorage.setItem("lakeState", selectedLake.lake);
   }
 
   function loadLakes() {
