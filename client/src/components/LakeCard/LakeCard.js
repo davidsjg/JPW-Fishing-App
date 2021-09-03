@@ -8,5 +8,13 @@ export default function LakeCard(props) {
 
   console.log(currLake);
 
-  return <></>;
+  return (
+    <Card style={{ width: "18rem" }} className={styles["imgContainer"]}>
+      {currLake ? (
+        <Card.Img src={currLake.img} />
+      ) : (
+        <i className="fa fa-spinner fa-spin" aria-hidden="true" />
+      )}
+    </Card>
+  );
 }
