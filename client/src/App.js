@@ -19,21 +19,16 @@ function App() {
     selectedLake: {},
   });
 
-  console.log(lakeState.selectedLake.lake);
-
   useEffect(() => {
     loadLakes();
   }, []);
 
   function setCurrentLake(selectedLake) {
-    setLakeState({ selectedLake });
-
-    localStorage.setItem("lakeState", selectedLake.lake);
+    setLakeState({ ...lakeState, selectedLake });
   }
 
   function setFishArray(fish, selectedLake) {
     setLakeState({ ...lakeState, fish, selectedLake });
-    localStorage.setItem("lakeState", selectedLake.lake);
   }
 
   function loadLakes() {
@@ -73,7 +68,7 @@ function App() {
               exact
               path={"/:lake"}
               render={(props) => (
-                <LakeData {...props} setCurrentLake={setCurrentLake} />
+                <LakeData {...props} setFishArray={setFishArray} />
               )}
             />
           </Switch>

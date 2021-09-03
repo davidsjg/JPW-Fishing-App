@@ -1,17 +1,12 @@
 import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import LakeContext from "../../utils/LakeContext";
+import styles from "./LakeCard.module.css";
 
-export default function LakeCard() {
-  const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
+export default function LakeCard(props) {
+  let currLake = props.currLake;
 
-  console.log(selectedLake);
+  console.log(currLake);
 
-  let lakeImage = selectedLake.lake;
-
-  return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="" />
-    </Card>
-  );
+  return <></>;
 }

@@ -98,7 +98,7 @@ const lakeSeed = [
     img: "https://protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20valley%20tarn.jpg",
   },
   {
-    lake: "Forest Lake #1",
+    lake: "Forest Lake 1",
     acres: 5,
     year: 2008,
     fish: ["Brook"],
@@ -116,7 +116,7 @@ const lakeSeed = [
     img: "https://cdn-assets.alltrails.com/uploads/photo/image/39972598/extra_large_a08e572c3e9bb9e65c08d71ecb257486.jpg",
   },
   {
-    lake: "Forest Lake #3",
+    lake: "Forest Lake 3",
     acres: 3,
     year: 2008,
     fish: ["Brook"],
