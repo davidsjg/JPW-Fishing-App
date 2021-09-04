@@ -14,13 +14,18 @@ export default function CutData(props) {
   return (
     <>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="" />
+        <Card.Img
+          variant="top"
+          src="http://westernnativetrout.org/wp-content/uploads/2019/07/greenback-cutthroat.jpg"
+        />
         <ListGroup variant="flush">
           <ListGroup.Item>
             Number of Cutthroat Trout: {selectedLake.numCuts}
           </ListGroup.Item>
-          <ListGroup.Item>Cutthroat Size Range:</ListGroup.Item>
-          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          <ListGroup.Item>Size Range: {selectedLake.cutRange}"</ListGroup.Item>
+          <ListGroup.Item>
+            Average Size: {selectedLake.cutAvgLength}""
+          </ListGroup.Item>
         </ListGroup>
       </Card>
     </>

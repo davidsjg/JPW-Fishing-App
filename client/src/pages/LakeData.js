@@ -61,9 +61,7 @@ export default function Lakes(props) {
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
             </Row>
-            <Row>
-              <BrookData />
-            </Row>
+            <Row>{/* <BrookData /> */}</Row>
           </Col>
 
           <Col size="md-9">

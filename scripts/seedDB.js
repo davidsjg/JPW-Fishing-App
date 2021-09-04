@@ -13,10 +13,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 5,
     cutAvgLength: 11.2,
-    cutRange: {
-      min: 8.5,
-      max: 14.4,
-    },
+    cutRange: "8.5-14.4",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -35,11 +32,6 @@ const lakeSeed = [
     numBrooks: 21,
     brkAvgLength: 10,
     brkRange: "6.7-12.5",
-    brkRange: {
-      min: 6.7,
-      max: 12.5,
-    },
-
     distance: 8,
     img: "https://i.imgur.com/HMZ4YHm.jpg",
   },
@@ -53,11 +45,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 38,
     brkAvgLength: 8.6,
-    brkRange: {
-      min: 3.7,
-      max: 13.2,
-    },
-
+    brkRange: "3.7-13.2",
     distance: 6,
     img: "https://i.imgur.com/aBidlhP.jpg",
   },
@@ -68,10 +56,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 21,
     cutAvgLength: 13.1,
-    cutRange: {
-      min: 5.4,
-      max: 16.9,
-    },
+    cutRange: "5.4-16.9",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -86,10 +71,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 5,
     cutAvgLength: 8.8,
-    cutRange: {
-      min: 7.0,
-      max: 10.3,
-    },
+    cutRange: "7.0-10.3",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -107,11 +89,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 11,
     brkAvgLength: 11.4,
-    brkRange: {
-      min: 8.5,
-      max: 15.7,
-    },
-
+    brkRange: "8.5-15.7",
     distance: 6,
     img: "https://cdn-assets.alltrails.com/uploads/photo/image/39972598/extra_large_a08e572c3e9bb9e65c08d71ecb257486.jpg",
   },
@@ -125,11 +103,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 19,
     brkAvgLength: 9.1,
-    brkRange: {
-      min: 6.3,
-      max: 10.7,
-    },
-
+    brkRange: "6.3-10.7",
     distance: 6,
     img: "https://i.imgur.com/kujnz8E.jpg",
   },
@@ -140,10 +114,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 17,
     cutAvgLength: 12.6,
-    cutRange: {
-      min: 5.8,
-      max: 17.1,
-    },
+    cutRange: "5.8-17.1",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -158,10 +129,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 9,
     cutAvgLength: 9.9,
-    cutRange: {
-      min: 7.7,
-      max: 13.1,
-    },
+    cutRange: "7.7-13.1",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -176,10 +144,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 0,
     cutAvgLength: 0,
-    cutRange: {
-      min: 0,
-      max: 0,
-    },
+    cutRange: 0,
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -194,10 +159,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 27,
     cutAvgLength: 9.2,
-    cutRange: {
-      min: 4.5,
-      max: 16.1,
-    },
+    cutRange: "4.5-16.1",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
@@ -215,11 +177,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 8,
     brkAvgLength: 9.6,
-    brkRange: {
-      min: 7.8,
-      max: 10.6,
-    },
-
+    brkRange: "7.8-10.6",
     distance: 14,
     img: "https://i.imgur.com/OR12Ylf.jpg",
   },
@@ -233,11 +191,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 0,
     brkAvgLength: 0,
-    brkRange: {
-      min: 0,
-      max: 0,
-    },
-
+    brkRange: 0,
     distance: 14,
     img: "http://www.craigfagerness.com/images/DSC09893.JPG",
   },
@@ -251,11 +205,7 @@ const lakeSeed = [
     cutRange: "",
     numBrooks: 49,
     brkAvgLength: 9.6,
-    brkRange: {
-      min: 5.7,
-      max: 12.2,
-    },
-
+    brkRange: "5.7-12.2",
     distance: 14,
     img: "https://dayhikesneardenver.com/wp-content/uploads/2017/09/lost-lake-near-nederland-cc-bfagan.jpg",
   },
@@ -266,10 +216,7 @@ const lakeSeed = [
     fish: ["Cutthroat"],
     numCuts: 10,
     cutAvgLength: 9.1,
-    cutRange: {
-      min: 5.9,
-      max: 11.6,
-    },
+    cutRange: "5.9-11.6",
     numBrooks: 0,
     brkAvgLength: 0,
     brkRange: 0,
