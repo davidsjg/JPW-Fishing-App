@@ -5,8 +5,10 @@ import LakeCard from "../components/LakeImage/LakeImage";
 import Row from "../components/Row/Row";
 import LakeContext from "../utils/LakeContext";
 import styles from "./LakeData.module.css";
-
-import Space from "../components/Space/Space";
+import ImageContainer from "../components/ImageContainer/ImageContainer";
+import FishData from "../components/CutData/CutData";
+import CutData from "../components/CutData/CutData";
+import BrookData from "../components/BrookData/BrookData";
 
 export default function Lakes(props) {
   const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
@@ -30,19 +32,18 @@ export default function Lakes(props) {
     <Contain>
       <Row>
         <Col size="md-3">
-          1of3
           <Row>
-            <Space />
+            <CutData currLake={tempLake} />
           </Row>
           <Row>
-            <Space />
+            <BrookData currLake={tempLake} />
           </Row>
         </Col>
 
         <Col size="md-9">
-          <Contain className={styles["imgContain"]}>
+          <ImageContainer>
             <LakeCard currLake={tempLake} />
-          </Contain>
+          </ImageContainer>
         </Col>
       </Row>
     </Contain>
