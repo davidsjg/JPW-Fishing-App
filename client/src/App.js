@@ -12,69 +12,21 @@ import LakeData from "./pages/LakeData";
 function App() {
   //empty array as second parameter means it only runs once
 
-  const [lakeState, setLakeState] = useState({
-    lake: {},
-    fish: ["Cutthroat"],
-    lakeNames: ["Heart"],
-    selectedLake: {},
-  });
-
-  useEffect(() => {
-    loadLakes();
-  }, []);
-
-  function setCurrentLake(selectedLake) {
-    setLakeState({ ...lakeState, selectedLake });
-  }
-
-  function setFishArray(fish, selectedLake) {
-    setLakeState({ ...lakeState, fish, selectedLake });
-  }
-
-  function loadLakes() {
-    API.getLakes()
-      .then((lake) => {
-        let fish = lake.data[0].fish;
-
-        let lakeNames = [];
-        let selectedLake = lake.data[0];
-
-        lake.data.map((lake) => {
-          lakeNames.push(lake.lake);
-        });
-
-        setLakeState({ lake, fish, lakeNames, selectedLake });
-
-        // getFish(lake);
-      })
-      .catch((err) => console.log(err));
-  }
-
   return (
-    <LakeContext.Provider value={lakeState}>
-      <Router>
-        <Contain>
-          <NavigationBar />
-          <Switch>
-            <Route
-              exact
-              path={"/"}
-              render={(props) => (
-                <Home {...props} setFishArray={setFishArray} />
-              )}
-            />
-            <Route path={"/lakes"} component={Lakes} />
-            <Route
-              exact
-              path={"/:lake"}
-              render={(props) => (
-                <LakeData {...props} setFishArray={setFishArray} />
-              )}
-            />
-          </Switch>
-        </Contain>
-      </Router>
-    </LakeContext.Provider>
+    <Router>
+      <Contain>
+        <NavigationBar />
+        <Switch>
+          <Route exact path={"/"} render={(props) => <Home {...props} />} />
+          <Route path={"/lakes"} component={Lakes} />
+          <Route
+            exact
+            path={"/:lake"}
+            render={(props) => <LakeData {...props} />}
+          />
+        </Switch>
+      </Contain>
+    </Router>
   );
 }
 

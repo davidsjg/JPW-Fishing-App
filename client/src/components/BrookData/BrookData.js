@@ -3,7 +3,6 @@ import Card from "react-bootstrap/card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function CutData(props) {
-  console.log(props);
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src="" />

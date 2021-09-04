@@ -5,13 +5,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 export default function CutData(props) {
   // console.log(props.currLake.acres);
 
-  console.log(props);
-
   let currLake = props.currLake;
 
-  {
-    currLake ? console.log(currLake.acres) : console.log("no fucking data");
-  }
+  // {
+  //   currLake ? console.log(currLake.acres) : console.log("no fucking data");
+  // }
 
   // let numCutties = currLake.numCuts;
 

@@ -3,13 +3,8 @@ import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
 import ContainTest from "../components/ContainTest/ContainTest";
 import Row from "../components/Row/Row";
-import LakeContext from "../utils/LakeContext";
 
 export default function Lakes() {
-  const { lake, fish, lakeNames } = useContext(LakeContext);
-
-  console.log(lake);
-
   return (
     <Contain>
       <Row>

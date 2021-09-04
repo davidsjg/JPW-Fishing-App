@@ -10,7 +10,11 @@ import { Alert, MenuItem } from "bootstrap";
 export default function DropdownBar(props) {
   const { lake, fish, lakeNames, selectedLake } = useContext(LakeContext);
 
-  let currFishState = props.props.props.props.setFishArray;
+  {
+    console.log(lake);
+  }
+
+  // let currFishState = props.props.props.setFishArray;
 
   let lakeSelect = "";
 
@@ -45,7 +49,7 @@ export default function DropdownBar(props) {
     console.log(newFound);
 
     // currLakeState(newFound);
-    currFishState(selectedFish, newFound);
+    // currFishState(selectedFish, newFound);
 
     return console.log(newFound);
   }
