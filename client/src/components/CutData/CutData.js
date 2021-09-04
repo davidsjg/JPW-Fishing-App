@@ -16,9 +16,10 @@ export default function CutData(props) {
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="" />
         <ListGroup variant="flush">
-          <ListGroup.Item>Number of Cutthroat Trout:</ListGroup.Item>
-
-          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>
+            Number of Cutthroat Trout: {selectedLake.numCuts}
+          </ListGroup.Item>
+          <ListGroup.Item>Cutthroat Size Range:</ListGroup.Item>
           <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
         </ListGroup>
       </Card>
