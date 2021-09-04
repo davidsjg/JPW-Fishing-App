@@ -68,7 +68,7 @@ export default function Lakes(props) {
 
           <Col size="md-9">
             <ImageContainer>
-              <LakeCard currLake={tempLake} />
+              <LakeCard />
             </ImageContainer>
           </Col>
         </Row>
