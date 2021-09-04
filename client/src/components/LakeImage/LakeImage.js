@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import LakeContext from "../../utils/LakeContext";
-import styles from "./LakeCard.module.css";
+import Image from "react-bootstrap/Image";
+import styles from "./LakeImage.module.css";
 
 export default function LakeCard(props) {
   let currLake = props.currLake;
@@ -9,12 +10,12 @@ export default function LakeCard(props) {
   console.log(currLake);
 
   return (
-    <Card style={{ width: "18rem" }} className={styles["imgContainer"]}>
+    <>
       {currLake ? (
-        <Card.Img src={currLake.img} />
+        <Image src={currLake.img} fluid />
       ) : (
         <i className="fa fa-spinner fa-spin" aria-hidden="true" />
       )}
-    </Card>
+    </>
   );
 }

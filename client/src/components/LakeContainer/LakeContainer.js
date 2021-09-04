@@ -3,7 +3,7 @@ import Row from "../Row/Row";
 import Col from "../Col/Col";
 import Contain from "../Contain/Contain";
 import DropdownCard from "../DropdownCard/DropdownCard";
-import Card from "../LakeCard/LakeCard";
+import LakeImage from "../LakeImage/LakeImage";
 import Br from "../Br/Br";
 
 import styles from "./LakeContainer.module.css";

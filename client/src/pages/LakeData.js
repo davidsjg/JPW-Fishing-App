@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
-import LakeCard from "../components/LakeCard/LakeCard";
+import LakeCard from "../components/LakeImage/LakeImage";
 import Row from "../components/Row/Row";
 import LakeContext from "../utils/LakeContext";
+import styles from "./LakeData.module.css";
 
 import Space from "../components/Space/Space";
 
@@ -39,7 +40,9 @@ export default function Lakes(props) {
         </Col>
 
         <Col size="md-9">
-          <LakeCard currLake={tempLake} />
+          <Contain className={styles["imgContain"]}>
+            <LakeCard currLake={tempLake} />
+          </Contain>
         </Col>
       </Row>
     </Contain>
