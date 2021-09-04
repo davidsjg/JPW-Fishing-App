@@ -3,18 +3,15 @@ import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
 import LakeCard from "../components/LakeImage/LakeImage";
 import Row from "../components/Row/Row";
-import LakeContext from "../utils/LakeContext";
-import styles from "./LakeData.module.css";
+import SelectedContext from "../utils/SelectedContext";
 import ImageContainer from "../components/ImageContainer/ImageContainer";
-import FishData from "../components/CutData/CutData";
 import CutData from "../components/CutData/CutData";
 import BrookData from "../components/BrookData/BrookData";
-import { set } from "mongoose";
 import API from "../utils/API";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
-  const [fish, setFish] = useState({});
+  const [fish, setFish] = useState([]);
   const [lake, setLake] = useState({});
 
   let temp;
@@ -57,15 +54,15 @@ export default function Lakes(props) {
   // typeof newLakeData !== "undefined" ? test() : console.log("no data yet");
 
   return (
-    <LakeContext.Provider value={(selectedLake, lake)}>
+    <SelectedContext.Provider value={{ selectedLake, lake, fish }}>
       <Contain>
         <Row>
           <Col size="md-3">
             <Row>
-              <CutData currLake={tempLake} />
+              <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
             </Row>
             <Row>
-              <BrookData currLake={tempLake} />
+              <BrookData />
             </Row>
           </Col>
 
@@ -76,6 +73,6 @@ export default function Lakes(props) {
           </Col>
         </Row>
       </Contain>
-    </LakeContext.Provider>
+    </SelectedContext.Provider>
   );
 }

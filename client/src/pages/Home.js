@@ -15,13 +15,7 @@ function Home(props) {
     loadLakes();
   }, []);
 
-  function setCurrentLake(selectedLake) {
-    setLakeState({ ...lakeState, selectedLake });
-  }
-
-  function setFishArray(fish, selectedLake) {
-    setLakeState({ ...lakeState, fish, selectedLake });
-  }
+  function setFishArray(fish, selectedLake) {}
 
   function loadLakes() {
     API.getLakes()
