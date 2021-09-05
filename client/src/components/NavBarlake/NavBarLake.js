@@ -19,7 +19,7 @@ export default function NavBarLake() {
     <Navbar className={styles["navBorder"]}>
       <Container>
         <Row>
-          <Col size="md-4">
+          <Col size="md-4" cname="sup" style={{ size: 50 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Navbar.Collapse>

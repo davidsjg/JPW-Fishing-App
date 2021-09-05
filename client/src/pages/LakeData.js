@@ -11,7 +11,7 @@ import API from "../utils/API";
 import styles from "./LakeData.module.css";
 import LakeDropdown from "../components/LakeDropdown/LakeDropdown";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
-import NavBarLake from "../components/NavBarlake/NavBarLake";
+import NavBarLake from "../components/NavBarLake/NavBarLake";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -76,7 +76,7 @@ export default function Lakes(props) {
                 <disp className={styles["bigDisp"]}>{selectedLake.lake}</disp>
                 <br></br>
                 <disp className={styles["smallDisp"]}>
-                  Acres:{selectedLake.acres} Year: {selectedLake.year}
+                  Acres: {selectedLake.acres} Survey Year: {selectedLake.year}
                 </disp>
               </disp>
               {/* <disp className={styles["aBorder"]}>
