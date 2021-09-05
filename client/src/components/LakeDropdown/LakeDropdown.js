@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
-import styles from "./DropdownBar.module.css";
+import styles from "./LakeDropdown.module.css";
 import LakeContext from "../../utils/LakeContext";
 
 export default function LakeDropdown(props) {
@@ -9,7 +9,7 @@ export default function LakeDropdown(props) {
 
   return (
     <>
-      <Dropdown className={styles["center1"]}>
+      <Dropdown className={styles["center1"]} style={{ marginTop: 1 }}>
         <Dropdown.Toggle
           style={{ width: "100%" }}
           variant="secondary"

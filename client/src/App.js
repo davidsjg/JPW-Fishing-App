@@ -15,7 +15,6 @@ function App() {
   return (
     <Router>
       <Contain>
-        <NavigationBar />
         <Switch>
           <Route exact path={"/"} render={(props) => <Home {...props} />} />
           <Route path={"/lakes"} component={Lakes} />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import NavigationBar from "../components/NavigationBar/NavigationBar";
 
 import LakeContainer from "../components/LakeContainer/LakeContainer";
 import LakeContext from "../utils/LakeContext";
@@ -39,9 +40,12 @@ function Home(props) {
   //by calling useState, it gives us access two fishState and setFishState that we are destructuring from an array
 
   return (
-    <LakeContext.Provider value={lakeState}>
-      <LakeContainer setFishArray={setFishArray} />
-    </LakeContext.Provider>
+    <>
+      <NavigationBar />
+      <LakeContext.Provider value={lakeState}>
+        <LakeContainer setFishArray={setFishArray} />
+      </LakeContext.Provider>
+    </>
   );
 }
 

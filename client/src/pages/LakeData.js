@@ -9,7 +9,9 @@ import CutData from "../components/CutData/CutData";
 import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
 import styles from "./LakeData.module.css";
-import LakeInfoCard from "../components/LakeInfoCard/LakeInfoCard";
+import LakeDropdown from "../components/LakeDropdown/LakeDropdown";
+import NavigationBar from "../components/NavigationBar/NavigationBar";
+import NavBarLake from "../components/NavBarlake/NavBarLake";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -64,6 +66,7 @@ export default function Lakes(props) {
 
   return (
     <SelectedContext.Provider value={{ selectedLake, lake, fish, lakeNames }}>
+      <NavBarLake />
       <Contain>
         <Row>
           <Col size="md-3">
