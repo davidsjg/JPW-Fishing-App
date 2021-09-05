@@ -14,6 +14,7 @@ import LakeInfoCard from "../components/LakeInfoCard/LakeInfoCard";
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
   const [fish, setFish] = useState([]);
+  const [lakeNames, setLakeNames] = useState([]);
   const [lake, setLake] = useState({});
 
   let temp;
@@ -23,6 +24,7 @@ export default function Lakes(props) {
   }, []);
 
   function loadLakes() {
+    let names = [];
     API.getLakes()
       .then((lake) => {
         setLake({ lake });
@@ -33,6 +35,11 @@ export default function Lakes(props) {
         temp = newLakeData[0];
         console.log(newLakeData[0]);
         setSelectedLake(temp);
+
+        lake.data.map((lake) => {
+          names.push(lake.lake);
+        });
+        setLakeNames(names);
       })
       .catch((err) => console.log(err));
   }
@@ -56,7 +63,7 @@ export default function Lakes(props) {
   // typeof newLakeData !== "undefined" ? test() : console.log("no data yet");
 
   return (
-    <SelectedContext.Provider value={{ selectedLake, lake, fish }}>
+    <SelectedContext.Provider value={{ selectedLake, lake, fish, lakeNames }}>
       <Contain>
         <Row>
           <Col size="md-3">

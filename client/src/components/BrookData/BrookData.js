@@ -5,9 +5,9 @@ import LakeContext from "../../utils/LakeContext";
 import SelectedContext from "../../utils/SelectedContext";
 
 export default function BrookData(props) {
-  const { lake, fish, selectedLake } = useContext(SelectedContext);
+  const { lake, fish, selectedLake, lakeNames } = useContext(SelectedContext);
 
-  console.log(selectedLake);
+  console.log(lakeNames);
 
   console.log(props);
 
