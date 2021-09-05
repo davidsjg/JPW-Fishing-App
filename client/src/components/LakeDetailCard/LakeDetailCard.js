@@ -20,7 +20,9 @@ export default function LakeDetailCard(props) {
       >
         <Card.Title>{props.props.lake}</Card.Title>
         <Card.Text></Card.Text>
-        <Button variant="secondary">View Lake</Button>
+        <Button href={"/" + props.props.lake} variant="secondary">
+          View Lake
+        </Button>
       </Card.Body>
     </Card>
   );
