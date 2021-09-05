@@ -1,16 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Card from "react-bootstrap/card";
 import ListGroup from "react-bootstrap/ListGroup";
 import LakeContext from "../../utils/LakeContext";
 import SelectedContext from "../../utils/SelectedContext";
+import API from "../../utils/API";
 
 export default function CutData(props) {
-  const { lake, fish, selectedLake } = useContext(SelectedContext);
-
-  console.log(selectedLake);
-
-  console.log(props);
-
+  const { lake, fish, selectedLake, lakeNames } = useContext(SelectedContext);
   return (
     <>
       <Card style={{ width: "18rem" }} style={{ marginTop: 5 }}>

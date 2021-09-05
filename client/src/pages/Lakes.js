@@ -1,23 +1,73 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
 import ContainTest from "../components/ContainTest/ContainTest";
 import Row from "../components/Row/Row";
+import NavBarLake from "../components/NavBarLake/NavBarLake";
+import LakeDetailCard from "../components/LakeDetailCard/LakeDetailCard";
+import API from "../utils/API";
 
 export default function Lakes() {
+  const [selectedLake, setSelectedLake] = useState({});
+  const [fish, setFish] = useState([]);
+  const [lakeNames, setLakeNames] = useState([]);
+  const [lake, setLake] = useState({});
+  const [lakesArray, setLakesArray] = useState([]);
+
+  let temp;
+  let historyLake;
+  let newLakeData;
+  let tempLake;
+  let allLakes = [];
+
+  useEffect(() => {
+    loadLakes();
+  }, []);
+
+  function loadLakes() {
+    let names = [];
+    API.getLakes()
+      .then((lake) => {
+        setLake({ lake });
+
+        // getFish(lake);
+        console.log(lake);
+        newLakeData = lake.data.filter((data) => data.lake === historyLake);
+        temp = newLakeData[0];
+        console.log(newLakeData[0]);
+        setSelectedLake(temp);
+
+        lake.data.map((lake) => {
+          names.push(lake.lake);
+        });
+
+        lake.data.map((lake) => {
+          allLakes.push(lake);
+        });
+        setLakesArray(allLakes);
+        setLakeNames(names);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  console.log(lakesArray);
+  // console.log(allLakes);
+
   return (
-    <Contain>
-      <Row>
-        <Col size="md-6">1of3</Col>
-        <Col size="md-6">2of3</Col>
-      </Row>
-      <Row>
-        <Col size="md-3">1</Col>
-        <Col size="md-6">
-          <ContainTest />
-        </Col>
-        <Col size="md-3">3</Col>
-      </Row>
-    </Contain>
+    <>
+      <NavBarLake />
+      <Contain>
+        <Row>
+          {lakesArray.map((lake) => {
+            return (
+              <>
+                <Col size="md-4" />
+                <LakeDetailCard eventKey={lake} props={lake} />
+              </>
+            );
+          })}
+        </Row>
+      </Contain>
+    </>
   );
 }

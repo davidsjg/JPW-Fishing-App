@@ -77,7 +77,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 11,
-    img: "https://protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20valley%20tarn.jpg",
+    img: "https://bloximages.newyork1.vip.townnews.com/outtherecolorado.com/content/tncms/assets/v3/editorial/d/c5/dc5add81-cb11-5d31-aec3-57b498a905df/5eece0839be47.image.jpg?crop=1600%2C900%2C0%2C150&resize=1600%2C900&order=crop%2Cresize",
   },
   {
     lake: "Forest Lake 1",
@@ -150,7 +150,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 15,
-    img: "https://www.protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20first%20icy%20lake%20550.jpg",
+    img: "https://ugc.naturalatlas.com/photos/0/43/263/43263/EJejjJil/2400.jpg?1558133651",
   },
   {
     lake: "James Peak Lake",

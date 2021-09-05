@@ -10,8 +10,6 @@ function Col(props) {
     .map((size) => "col-" + size)
     .join(" ");
 
-  console.log(props);
-
   return (
     <div
       className={styles[`"${props.cname}"`]}
