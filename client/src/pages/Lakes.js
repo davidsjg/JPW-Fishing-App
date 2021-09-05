@@ -61,8 +61,13 @@ export default function Lakes() {
           {lakesArray.map((lake) => {
             return (
               <>
-                <Col size="md-4" />
-                <LakeDetailCard eventKey={lake} props={lake} />
+                <Col
+                  size="md-4"
+                  style={{ justifyContent: "center" }}
+                  style={{ display: "flex" }}
+                >
+                  <LakeDetailCard eventKey={lake} props={lake} />
+                </Col>
               </>
             );
           })}

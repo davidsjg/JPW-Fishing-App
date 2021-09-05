@@ -8,9 +8,16 @@ export default function LakeDetailCard(props) {
     useContext(SelectedContext);
   console.log(props.props);
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card
+      style={{ width: "18rem" }}
+      style={{ justifyContent: "center" }}
+      style={{ marginBottom: 5 }}
+    >
       <Card.Img variant="top" src={props.props.img} />
-      <Card.Body>
+      <Card.Body
+        // style={{ textAlign: "center" }}
+        style={{ backgroundColor: "orange", textAlign: "center" }}
+      >
         <Card.Title>{props.props.lake}</Card.Title>
         <Card.Text></Card.Text>
         <Button variant="secondary">View Lake</Button>

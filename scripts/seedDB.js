@@ -19,7 +19,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 10,
-    img: "https://i.imgur.com/7Ur4Wbc.png",
+    img: "https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5323244.jpg",
   },
   {
     lake: "Crater Lake - Mid-North",
@@ -77,7 +77,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 11,
-    img: "https://bloximages.newyork1.vip.townnews.com/outtherecolorado.com/content/tncms/assets/v3/editorial/d/c5/dc5add81-cb11-5d31-aec3-57b498a905df/5eece0839be47.image.jpg?crop=1600%2C900%2C0%2C150&resize=1600%2C900&order=crop%2Cresize",
+    img: "https://i.imgur.com/8fMeLeY.jpg",
   },
   {
     lake: "Forest Lake 1",
@@ -135,7 +135,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 15,
-    img: "https://cdn2.apstatic.com/photos/hike/7059263_medium_1559875445.jpg",
+    img: "https://i.imgur.com/zVM3t5O.jpg",
   },
   {
     lake: "Iceberg South",
@@ -150,7 +150,7 @@ const lakeSeed = [
     brkRange: 0,
 
     distance: 15,
-    img: "https://ugc.naturalatlas.com/photos/0/43/263/43263/EJejjJil/2400.jpg?1558133651",
+    img: "https://peakvisor.com/img/news/upper-crater-lake.jpg",
   },
   {
     lake: "James Peak Lake",
@@ -207,7 +207,7 @@ const lakeSeed = [
     brkAvgLength: 9.6,
     brkRange: "5.7-12.2",
     distance: 14,
-    img: "https://dayhikesneardenver.com/wp-content/uploads/2017/09/lost-lake-near-nederland-cc-bfagan.jpg",
+    img: "https://dayhikesneardenver.b-cdn.net/wp-content/uploads/2018/08/lost-lake-near-nederland-ccfrazier.jpg",
   },
   {
     lake: "Roger's Pass Lake",
