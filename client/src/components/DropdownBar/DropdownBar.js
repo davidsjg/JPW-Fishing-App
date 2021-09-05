@@ -19,15 +19,19 @@ export default function DropdownBar(props) {
   let lakeSelect = "";
 
   function handleSelect(e) {
+    // let newLakeData = lakeNames.filter((lake) => lake === e);
+
     let newLakeData = lakeNames.filter((lake) => lake === e);
 
-    let lakeData = lakeNames.find((lake) => {
-      let newLakeData = lakeNames.filter((lake) => lake === e);
+    lakeSelect = newLakeData.join();
 
-      lakeSelect = newLakeData.join();
+    // let lakeData = lakeNames.find((lake) => {
+    //   let newLakeData = lakeNames.filter((lake) => lake === e);
 
-      return newLakeData === e;
-    });
+    //   lakeSelect = newLakeData.join();
+
+    //   return newLakeData === e;
+    // });
     console.log(lakeSelect);
 
     newFunction();
