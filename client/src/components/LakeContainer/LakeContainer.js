@@ -11,7 +11,7 @@ import DropdownBar from "../DropdownBar/DropdownBar";
 
 export default function LakeContainer(props) {
   return (
-    <Contain>
+    <Contain mainContain="mainContain">
       <Row>
         <Col size="md-3"></Col>
         <Col size="md-6">

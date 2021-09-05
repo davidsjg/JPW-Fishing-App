@@ -9,11 +9,12 @@ export default function DropdownBar(props) {
 
   return (
     <>
-      <Dropdown className={styles["center1"]}>
+      <Dropdown className={styles["center2"]}>
         <Dropdown.Toggle
           style={{ width: "100%" }}
           variant="secondary"
           id="dropdown-basic"
+          style={{ backgroundColor: "white", color: "black", width: "100%" }}
         >
           SELECT A LAKE!
         </Dropdown.Toggle>

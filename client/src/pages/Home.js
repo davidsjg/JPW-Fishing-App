@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
+import styles from "./Home.module.css";
+import Contain from "../components/Contain/Contain";
 
 import LakeContainer from "../components/LakeContainer/LakeContainer";
 import LakeContext from "../utils/LakeContext";
+import Br from "../components/Br/Br";
 function Home(props) {
   const [lakeState, setLakeState] = useState({
     lake: {},
@@ -42,9 +45,29 @@ function Home(props) {
   return (
     <>
       <NavigationBar />
-      <LakeContext.Provider value={lakeState}>
-        <LakeContainer setFishArray={setFishArray} />
-      </LakeContext.Provider>
+      <div className={styles["homeContain"]}>
+        <LakeContext.Provider value={lakeState}>
+          <LakeContainer setFishArray={setFishArray} />
+        </LakeContext.Provider>
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+        <Br />
+      </div>
     </>
   );
 }
