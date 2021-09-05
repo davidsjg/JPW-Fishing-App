@@ -13,7 +13,7 @@ export default function CutData(props) {
 
   return (
     <>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }} style={{ marginTop: 5 }}>
         <Card.Img
           variant="top"
           src="http://westernnativetrout.org/wp-content/uploads/2019/07/greenback-cutthroat.jpg"

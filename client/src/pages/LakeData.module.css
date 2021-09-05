@@ -1,3 +1,20 @@
 .imgContain {
   border: 1px black;
 }
+
+.aBorder {
+  text-align: center;
+  font-style: oblique;
+
+  background-color: orange;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 3px;
+}
+
+.bigDisp {
+  font-size: 25px;
+}
+
+.smallDisp {
+  font-size: 15px;
+}

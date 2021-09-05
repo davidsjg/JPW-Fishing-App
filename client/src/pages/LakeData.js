@@ -8,6 +8,8 @@ import ImageContainer from "../components/ImageContainer/ImageContainer";
 import CutData from "../components/CutData/CutData";
 import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
+import styles from "./LakeData.module.css";
+import LakeInfoCard from "../components/LakeInfoCard/LakeInfoCard";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -58,6 +60,22 @@ export default function Lakes(props) {
       <Contain>
         <Row>
           <Col size="md-3">
+            <Row>
+              {/* <LakeInfoCard /> */}
+              <disp className={styles["aBorder"]}>
+                <disp className={styles["bigDisp"]}>{selectedLake.lake}</disp>
+                <br></br>
+                <disp className={styles["smallDisp"]}>
+                  Acres:{selectedLake.acres} Year: {selectedLake.year}
+                </disp>
+              </disp>
+              {/* <disp className={styles["aBorder"]}>
+                Acres: {selectedLake.acres}
+              </disp>
+              <disp className={styles["aBorder"]}>
+                Year Stocked: {selectedLake.year}
+              </disp> */}
+            </Row>
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
             </Row>
