@@ -19,7 +19,7 @@ export default function BrookData(props) {
           variant="top"
           src="https://www.pourvoiries.com/wp-content/uploads/2010/11/OmbleFontaine.jpg"
         />
-        <Table striped bordered>
+        <Table bordered>
           <tbody style={{ fontSize: 13 }}>
             <tr>
               <td>Number of Cutthroat Trout:</td>

@@ -1,21 +1,21 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import React, { useContext } from "react";
+import Row from "../Row/Row";
+import Col from "../Col/Col";
+import Container from "react-bootstrap/esm/Container";
 import styles from "./DataDisplay.module.css";
+import SelectedContext from "../../utils/SelectedContext";
 
 export default function DataDisplay() {
+  const { lake, fish, selectedLake } = useContext(SelectedContext);
   return (
-    <div className="container" className={styles["dataContain"]}>
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-    </div>
+    <Container>
+      <Row cname="justify-content-md-center">
+        <Col size="md-3" cname="align-content-center"></Col>
+        <Col size="md-6" cname="align-content-center">
+          test
+        </Col>
+        <Col size="md-3">test</Col>
+      </Row>
+    </Container>
   );
 }

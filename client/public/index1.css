@@ -22,3 +22,8 @@ body {
   align-items: center;
   align-self: center;
 }
+
+.lakeDataDisp {
+  border-radius: 5px;
+  text-align: center;
+}

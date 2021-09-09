@@ -15,7 +15,7 @@ export default function CutData(props) {
           variant="top"
           src="http://westernnativetrout.org/wp-content/uploads/2019/07/greenback-cutthroat.jpg"
         />
-        <Table striped bordered>
+        <Table bordered>
           <tbody style={{ fontSize: 13 }}>
             <tr>
               <td>Number of Cutthroat Trout:</td>

@@ -10,7 +10,8 @@ export default function LakeImage(props) {
     <>
       <Image
         src={selectedLake.img}
-        fluid
+        // style={{ height: 250 }}
+        // style={{ width: "80%" }}
         rounded
         className={styles["imgContain"]}
       />

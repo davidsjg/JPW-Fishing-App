@@ -10,8 +10,7 @@ import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
 import styles from "./LakeData.module.css";
 import NavBarLake from "../components/NavBarLake/NavBarLake";
-import DataDisplay from "../components/DataDisplay/DataDisplay";
-import Container from "react-bootstrap/esm/Container";
+import Button from "react-bootstrap/Button";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -68,17 +67,32 @@ export default function Lakes(props) {
     <SelectedContext.Provider value={{ selectedLake, lake, fish, lakeNames }}>
       <NavBarLake />
       <Contain>
+        <Row cname="justify-content-md-center">
+          <Col size="md-3" cname="align-content-center">
+            <disp className={styles["aBorder"]}>
+              <disp className={styles["bigDisp"]}>
+                Survey Year: {selectedLake.year}
+              </disp>
+              <br />
+            </disp>
+          </Col>
+          <Col size="md-6" cname="lakeDataDisp">
+            <disp className={styles["aBorder"]}>
+              <disp className={styles["bigDisp1"]}>{selectedLake.lake}</disp>
+              <br></br>
+            </disp>
+          </Col>
+          <Col size="md-3">
+            <disp className={styles["aBorder"]} style={{ float: "right" }}>
+              <disp className={styles["bigDisp"]}>
+                Acres: {selectedLake.acres}
+              </disp>
+              <br></br>
+            </disp>
+          </Col>
+        </Row>
         <Row>
           <Col size="md-3">
-            <Row>
-              <disp className={styles["aBorder"]}>
-                <disp className={styles["bigDisp"]}>{selectedLake.lake}</disp>
-                <br></br>
-                <disp className={styles["smallDisp"]}>
-                  Acres: {selectedLake.acres} Survey Year: {selectedLake.year}
-                </disp>
-              </disp>
-            </Row>
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
             </Row>
@@ -87,15 +101,20 @@ export default function Lakes(props) {
             </Row>
           </Col>
 
-          <Col size="md-9">
+          <Col size="md-8">
             <Row>
               <ImageContainer>
-                <LakeImage />
-                <DataDisplay />
+                <LakeImage style={{ float: "left" }} />
               </ImageContainer>
             </Row>
+          </Col>
+          <Col size="md-1">
             <Row>
-              <DataDisplay />
+              <Button variant="secondary">View Map</Button>
+              <Button variant="secondary">View Map</Button>
+              <Button style={{ float: "right" }} variant="secondary">
+                View Map
+              </Button>
             </Row>
           </Col>
         </Row>
