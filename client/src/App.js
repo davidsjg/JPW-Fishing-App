@@ -8,6 +8,7 @@ import LakeContext from "./utils/LakeContext";
 import API from "./utils/API";
 import Lakes from "./pages/Lakes";
 import LakeData from "./pages/LakeData";
+import Table from "./pages/Table";
 
 function App() {
   //empty array as second parameter means it only runs once
@@ -17,6 +18,7 @@ function App() {
       <Contain>
         <Switch>
           <Route exact path={"/"} render={(props) => <Home {...props} />} />
+          <Route path={"/table"} component={Table} />
           <Route path={"/lakes"} component={Lakes} />
           <Route
             exact

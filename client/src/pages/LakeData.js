@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
-import LakeCard from "../components/LakeImage/LakeImage";
+import LakeImage from "../components/LakeImage/LakeImage";
 import Row from "../components/Row/Row";
 import SelectedContext from "../utils/SelectedContext";
 import ImageContainer from "../components/ImageContainer/ImageContainer";
@@ -9,9 +9,9 @@ import CutData from "../components/CutData/CutData";
 import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
 import styles from "./LakeData.module.css";
-import LakeDropdown from "../components/LakeDropdown/LakeDropdown";
-import NavigationBar from "../components/NavigationBar/NavigationBar";
 import NavBarLake from "../components/NavBarLake/NavBarLake";
+import DataDisplay from "../components/DataDisplay/DataDisplay";
+import Container from "react-bootstrap/esm/Container";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -71,7 +71,6 @@ export default function Lakes(props) {
         <Row>
           <Col size="md-3">
             <Row>
-              {/* <LakeInfoCard /> */}
               <disp className={styles["aBorder"]}>
                 <disp className={styles["bigDisp"]}>{selectedLake.lake}</disp>
                 <br></br>
@@ -79,12 +78,6 @@ export default function Lakes(props) {
                   Acres: {selectedLake.acres} Survey Year: {selectedLake.year}
                 </disp>
               </disp>
-              {/* <disp className={styles["aBorder"]}>
-                Acres: {selectedLake.acres}
-              </disp>
-              <disp className={styles["aBorder"]}>
-                Year Stocked: {selectedLake.year}
-              </disp> */}
             </Row>
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
@@ -97,8 +90,12 @@ export default function Lakes(props) {
           <Col size="md-9">
             <Row>
               <ImageContainer>
-                <LakeCard />
+                <LakeImage />
+                <DataDisplay />
               </ImageContainer>
+            </Row>
+            <Row>
+              <DataDisplay />
             </Row>
           </Col>
         </Row>

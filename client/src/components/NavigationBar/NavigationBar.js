@@ -36,11 +36,11 @@ export default function NavigationBar() {
           </Col>
           <Col size="md-4">
             <Navbar.Collapse className="justify-content-end">
-              <Nav.Link className={styles["dividerLink"]} href="#home">
-                Login
+              <Nav.Link className={styles["navColor"]} href="/table">
+                Data
               </Nav.Link>
-              <Nav.Link className={styles["navColor"]} href="#home">
-                My Profile
+              <Nav.Link className={styles["dividerLink2"]} href="/lakes">
+                JPW Info
               </Nav.Link>
             </Navbar.Collapse>
           </Col>
