@@ -20,6 +20,9 @@ const lakeSeed = [
 
     distance: 10,
     img: "https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5323244.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/arapaho-lakes-via-rogers-pass-trail-and-forest-lakes-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/arapaho-lakes-via-rogers-pass-trail-and-forest-lakes-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Crater Lake - Mid-North",
@@ -34,6 +37,9 @@ const lakeSeed = [
     brkRange: "6.7-12.5",
     distance: 8,
     img: "https://i.imgur.com/HMZ4YHm.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Crater Lake - Mid-South",
@@ -48,6 +54,9 @@ const lakeSeed = [
     brkRange: "3.7-13.2",
     distance: 6,
     img: "https://i.imgur.com/aBidlhP.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Crater Lake - Upper",
@@ -63,6 +72,9 @@ const lakeSeed = [
 
     distance: 11,
     img: "https://i.imgur.com/0rx1Hwy.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Clayton Lake",
@@ -78,6 +90,9 @@ const lakeSeed = [
 
     distance: 11,
     img: "https://i.imgur.com/8fMeLeY.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Forest Lake 1",
@@ -92,6 +107,8 @@ const lakeSeed = [
     brkRange: "8.5-15.7",
     distance: 6,
     img: "https://cdn-assets.alltrails.com/uploads/photo/image/39972598/extra_large_a08e572c3e9bb9e65c08d71ecb257486.jpg",
+    trail: "https://www.alltrails.com/trail/us/colorado/forest-lakes-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/forest-lakes-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Forest Lake 3",
@@ -106,6 +123,8 @@ const lakeSeed = [
     brkRange: "6.3-10.7",
     distance: 6,
     img: "https://i.imgur.com/kujnz8E.jpg",
+    trail: "https://www.alltrails.com/trail/us/colorado/forest-lakes-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/forest-lakes-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Heart Lake",
@@ -121,6 +140,9 @@ const lakeSeed = [
 
     distance: 12,
     img: "https://i.imgur.com/WvcNsBX.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/heart-lake-via-south-boulder-creek-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/heart-lake-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Iceberg North",
@@ -136,6 +158,9 @@ const lakeSeed = [
 
     distance: 15,
     img: "https://i.imgur.com/zVM3t5O.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Iceberg South",
@@ -166,6 +191,9 @@ const lakeSeed = [
 
     distance: 15,
     img: "https://cdn-assets.alltrails.com/uploads/photo/image/19174780/extra_large_7d0fe888c28b31d3d992fc1d34de51c6.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Jenny Lake",
@@ -180,6 +208,8 @@ const lakeSeed = [
     brkRange: "7.8-10.6",
     distance: 14,
     img: "https://i.imgur.com/OR12Ylf.jpg",
+    trail: "https://www.alltrails.com/trail/us/colorado/rollins-pass",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/rollins-pass?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Little Echo Lake",
@@ -194,6 +224,9 @@ const lakeSeed = [
     brkRange: 0,
     distance: 14,
     img: "http://www.craigfagerness.com/images/DSC09893.JPG",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/james-peak-north-east-ridge-via-little-echo-lake",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/james-peak-north-east-ridge-via-little-echo-lake?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Lost Lake",
@@ -208,6 +241,9 @@ const lakeSeed = [
     brkRange: "5.7-12.2",
     distance: 14,
     img: "https://dayhikesneardenver.b-cdn.net/wp-content/uploads/2018/08/lost-lake-near-nederland-ccfrazier.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/lost-lake-via-hessie-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/lost-lake-via-hessie-trail?mobileMap=false&ref=sidebar-static-map",
   },
   {
     lake: "Roger's Pass Lake",
@@ -223,6 +259,9 @@ const lakeSeed = [
 
     distance: 13,
     img: "https://www.protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20rogers%20peak%20lake%20morning%20550.jpg",
+    trail:
+      "https://www.alltrails.com/trail/us/colorado/rogers-pass-lake-via-south-boulder-creek-trail",
+    map: "https://www.alltrails.com/explore/trail/us/colorado/rogers-pass-lake-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map",
   },
 ];
 

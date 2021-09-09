@@ -110,11 +110,9 @@ export default function Lakes(props) {
           </Col>
           <Col size="md-1">
             <Row>
+              <Button variant="secondary">View Hiking Map</Button>
+              <Button variant="secondary">View Weather</Button>
               <Button variant="secondary">View Map</Button>
-              <Button variant="secondary">View Map</Button>
-              <Button style={{ float: "right" }} variant="secondary">
-                View Map
-              </Button>
             </Row>
           </Col>
         </Row>
