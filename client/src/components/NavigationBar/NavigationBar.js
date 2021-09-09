@@ -39,7 +39,16 @@ export default function NavigationBar() {
               <Nav.Link className={styles["navColor"]} href="/table">
                 Data
               </Nav.Link>
-              <Nav.Link className={styles["dividerLink2"]} href="/lakes">
+              <Nav.Link
+                onClick={() =>
+                  window.open(
+                    "https://cpw.state.co.us/thingstodo/Fishery%20Survey%20Summaries/JamesPeakWildernessLakes.pdf",
+                    "_blank"
+                  )
+                }
+                className={styles["dividerLink2"]}
+                href="/lakes"
+              >
                 JPW Info
               </Nav.Link>
             </Navbar.Collapse>
