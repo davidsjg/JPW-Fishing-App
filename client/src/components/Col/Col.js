@@ -9,7 +9,7 @@ function Col(props) {
     .split(" ")
     .map((size) => "col-" + size)
     .join(" ");
-  console.log(props);
+
   const cName = props.cname;
 
   return (

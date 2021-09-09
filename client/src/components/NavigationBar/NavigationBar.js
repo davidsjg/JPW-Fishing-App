@@ -47,7 +47,6 @@ export default function NavigationBar() {
                   )
                 }
                 className={styles["dividerLink2"]}
-                href="/lakes"
               >
                 JPW Info
               </Nav.Link>

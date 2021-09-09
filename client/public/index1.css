@@ -38,3 +38,13 @@ body {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+.topHeading {
+  text-align: center;
+  font-size: 30px;
+}
+
+.dataTable {
+  text-align: center;
+  align-content: center;
+}
