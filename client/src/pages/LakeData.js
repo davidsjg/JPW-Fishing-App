@@ -108,11 +108,30 @@ export default function Lakes(props) {
               </ImageContainer>
             </Row>
           </Col>
-          <Col size="md-1">
+          <Col cname="buttonContain" size="md-1">
             <Row>
-              <Button variant="secondary">View Hiking Map</Button>
-              <Button variant="secondary">View Weather</Button>
-              <Button variant="secondary">View Map</Button>
+              <Button
+                className={styles["linkButton"]}
+                // href={selectedLake.trail}
+                variant="secondary"
+                onClick={() => window.open(selectedLake.trail, "_blank")}
+              >
+                Trail Info
+              </Button>
+              <Button
+                className={styles["linkButton"]}
+                onClick={() => window.open(selectedLake.map, "_blank")}
+                variant="secondary"
+              >
+                Hiking Map
+              </Button>
+              <Button
+                className={styles["linkButton"]}
+                onClick={() => window.open(selectedLake.map, "_blank")}
+                variant="secondary"
+              >
+                Weather
+              </Button>
             </Row>
           </Col>
         </Row>

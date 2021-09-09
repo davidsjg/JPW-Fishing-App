@@ -28,3 +28,8 @@ body {
   text-align: center;
   margin-bottom: 3px;
 }
+
+.buttonContain {
+  display: flex;
+  flex-direction: column;
+}
