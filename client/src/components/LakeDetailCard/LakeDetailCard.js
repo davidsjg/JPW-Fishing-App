@@ -16,7 +16,7 @@ export default function LakeDetailCard(props) {
       <Card.Img variant="top" src={props.props.img} />
       <Card.Body
         // style={{ textAlign: "center" }}
-        style={{ backgroundColor: "orange", textAlign: "center" }}
+        style={{ backgroundColor: "moccasin", textAlign: "center" }}
       >
         <Card.Title>{props.props.lake}</Card.Title>
         <Card.Text></Card.Text>

@@ -95,9 +95,11 @@ export default function Lakes(props) {
           </Col>
 
           <Col size="md-9">
-            <ImageContainer>
-              <LakeCard />
-            </ImageContainer>
+            <Row>
+              <ImageContainer>
+                <LakeCard />
+              </ImageContainer>
+            </Row>
           </Col>
         </Row>
       </Contain>
