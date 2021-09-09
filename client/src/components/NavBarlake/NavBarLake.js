@@ -38,11 +38,19 @@ export default function NavBarLake() {
           </Col>
           <Col size="md-4">
             <Navbar.Collapse className="justify-content-end">
-              <Nav.Link className={styles["dividerLink"]} href="#home">
-                Login
+              <Nav.Link className={styles["navColor"]} href="/table">
+                Data
               </Nav.Link>
-              <Nav.Link className={styles["navColor"]} href="#home">
-                My Profile
+              <Nav.Link
+                onClick={() =>
+                  window.open(
+                    "https://cpw.state.co.us/thingstodo/Fishery%20Survey%20Summaries/JamesPeakWildernessLakes.pdf",
+                    "_blank"
+                  )
+                }
+                className={styles["dividerLink2"]}
+              >
+                JPW Info
               </Nav.Link>
             </Navbar.Collapse>
           </Col>

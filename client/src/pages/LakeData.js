@@ -67,7 +67,7 @@ export default function Lakes(props) {
     <SelectedContext.Provider value={{ selectedLake, lake, fish, lakeNames }}>
       <NavBarLake />
       <Contain>
-        <Row cname="justify-content-md-center">
+        <Row cname="topRow">
           <Col size="md-3" cname="align-content-center">
             <disp className={styles["aBorder"]}>
               <disp className={styles["bigDisp"]}>
@@ -123,14 +123,14 @@ export default function Lakes(props) {
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
               >
-                Hiking Map
+                Weather
               </Button>
               <Button
                 className={styles["linkButton"]}
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
               >
-                Weather
+                Hiking Map
               </Button>
             </Row>
           </Col>
