@@ -16,3 +16,9 @@ body {
   /* height: 100%;
   width: auto; */
 }
+
+.homeCardContainer {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}

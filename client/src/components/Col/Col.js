@@ -9,12 +9,14 @@ function Col(props) {
     .split(" ")
     .map((size) => "col-" + size)
     .join(" ");
+  console.log(props);
+  const cName = props.cname;
 
   return (
     <div
-      className={styles[`"${props.cname}"`]}
+      className={`${props.cname} ${size}`}
       // className={styles["colClass"]}
-      className={size}
+      // className={size}
     >
       {props.children}
     </div>
