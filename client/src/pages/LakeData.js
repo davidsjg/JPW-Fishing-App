@@ -72,6 +72,16 @@ export default function Lakes(props) {
   let historyLake = props.match.params.lake;
 
   let newLakeData;
+  let tempForecast;
+  let tempFiveDay;
+
+  forecast.length > 0 &&
+    (tempFiveDay = `http://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`);
+  forecast.length > 0 && console.log(tempFiveDay);
+
+  typeof tempForecast !== "undefined"
+    ? (tempForecast = forecast[0].weather[0].icon)
+    : console.log("balls");
   // let tempLake;
 
   // lake
@@ -161,6 +171,8 @@ export default function Lakes(props) {
                 {forecast.length > 0 && (
                   <span>{forecast[0].weather[0].description}</span>
                 )}
+                {forecast.length > 0 && console.log(forecast)}
+                {forecast.length > 0 && <img src={tempFiveDay} />}
               </div>
             </Row>
           </Col>
