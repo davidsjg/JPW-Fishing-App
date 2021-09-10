@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Col from "../components/Col/Col";
+import Br from "../components/Br/Br";
 import Contain from "../components/Contain/Contain";
 import LakeImage from "../components/LakeImage/LakeImage";
 import Row from "../components/Row/Row";
@@ -22,16 +23,20 @@ export default function Lakes(props) {
   const [forecast, setForecast] = useState([]);
   const [windSpeed, setWindSpeed] = useState();
   const [windDirection, setWindDirection] = useState("");
+  const [cloud, setCloud] = useState("");
 
   let temp;
   let dailyForecast = [];
 
   useEffect(() => {
     loadLakes();
+    loadWeather();
   }, []);
 
   function loadWeather() {
     let windSpeed;
+    let cloud;
+
     API.getWeather().then((data) => {
       setWeather({ data });
       console.log("returned data below");
@@ -43,14 +48,16 @@ export default function Lakes(props) {
       setForecast(dailyForecast);
       windSpeed = data.data.daily[0].wind_speed;
       setWindSpeed(windSpeed);
+      cloud = data.data.daily[0].weather[0].main;
+      setCloud(cloud);
 
       calcWind(data.data.daily[0].wind_deg, data.data.daily[0].wind_speed);
     });
   }
 
-  function handleButtonClick() {
-    loadWeather();
-  }
+  // function handleButtonClick() {
+  //   console.log("SUP You CLICKED THAT BOOTAHN");
+  // }
 
   function calcWind(direction, speed) {
     setWindSpeed(speed);
@@ -171,14 +178,16 @@ export default function Lakes(props) {
           </Col>
           <Col cname="buttonContain" size="md-1">
             <Row>
-              <i>Current Weather</i>
+              <i style={{ textAlign: "center" }}>Current Weather</i>
+              <Br />
+              <Br />
+              <Br />
               <div style={{ textAlign: "center" }}>
-                {/* {forecast.length > 0 && (
-                  <span>{forecast[0].weather[0].description}</span>
-                )} */}
                 {forecast.length > 0 && console.log(forecast)}
                 {forecast.length > 0 && <img src={tempFiveDay} />}
-                {/* {forecast.length > 0 && <p>{(dayTemp - 273) * 1.8 + 32}</p>} */}
+                {cloud}
+                <Br />
+                <Br />
                 Temp:
                 {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
                 Wind:
@@ -188,14 +197,14 @@ export default function Lakes(props) {
                   </p>
                 )}
               </div>
-              <Button
+              {/* <Button
                 className={styles["linkButton"]}
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
                 onClick={handleButtonClick}
               >
                 GET WEATHER
-              </Button>
+              </Button> */}
               <Button
                 className={styles["linkButton"]}
                 // href={selectedLake.trail}
