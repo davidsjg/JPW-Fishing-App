@@ -26,25 +26,22 @@ export default function Lakes(props) {
 
   useEffect(() => {
     loadLakes();
-    loadWeather();
   }, []);
 
   function handleButtonClick() {
     console.log(forecast);
     console.log(weather);
+    loadWeather();
   }
 
   function loadWeather() {
     API.getWeather().then((data) => {
       setWeather({ data });
-      console.log(data);
 
-      data.data.daily.length > 0
-        ? data.data.daily.map((day) => {
-            dailyForecast.push(day);
-            setForecast(dailyForecast);
-          })
-        : console.log("youre fucked");
+      data.data.daily.map((day) => {
+        dailyForecast.push(day);
+        setForecast(dailyForecast);
+      });
     });
   }
 
@@ -74,26 +71,23 @@ export default function Lakes(props) {
   let newLakeData;
   let tempForecast;
   let tempFiveDay;
+  let dayTemp;
+  let curTemp;
 
   forecast.length > 0 &&
     (tempFiveDay = `http://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`);
   forecast.length > 0 && console.log(tempFiveDay);
 
+  forecast.length > 0 && (dayTemp = forecast[0].temp.day);
+  forecast.length > 0 && console.log(dayTemp);
+
+  forecast.length > 0 &&
+    dayTemp !== undefined &&
+    (curTemp = (dayTemp - 273) * 1.8 + 32);
+
   typeof tempForecast !== "undefined"
     ? (tempForecast = forecast[0].weather[0].icon)
     : console.log("balls");
-  // let tempLake;
-
-  // lake
-  // ? (newLakeData = lake.filter((data) => data.lake === historyLake))
-  //   : console.log("no data yet");
-  // console.log(newLakeData);
-
-  // typeof newLakeData !== "undefined"
-  //   ? (tempLake = newLakeData[0])
-  //   : console.log("no data yet");
-
-  // typeof newLakeData !== "undefined" ? test() : console.log("no data yet");
 
   return (
     <SelectedContext.Provider
@@ -173,6 +167,8 @@ export default function Lakes(props) {
                 )}
                 {forecast.length > 0 && console.log(forecast)}
                 {forecast.length > 0 && <img src={tempFiveDay} />}
+                {/* {forecast.length > 0 && <p>{(dayTemp - 273) * 1.8 + 32}</p>} */}
+                {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
               </div>
             </Row>
           </Col>
