@@ -22,7 +22,7 @@ export default function BrookData(props) {
         <Table bordered>
           <tbody style={{ fontSize: 13 }}>
             <tr>
-              <td>Number of Cutthroat Trout:</td>
+              <td>Number of Brook Trout:</td>
               <td style={{ textAlign: "center" }}>{selectedLake.numBrooks}</td>
             </tr>
             <tr>

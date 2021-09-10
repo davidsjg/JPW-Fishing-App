@@ -6,7 +6,7 @@ import SelectedContext from "../../utils/SelectedContext";
 export default function LakeDetailCard(props) {
   const { lake, fish, lakeNames, selectedLake, LakesArray } =
     useContext(SelectedContext);
-  console.log(props.props);
+
   return (
     <Card
       style={{ width: "18rem" }}

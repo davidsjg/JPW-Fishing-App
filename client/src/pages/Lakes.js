@@ -50,7 +50,6 @@ export default function Lakes() {
       .catch((err) => console.log(err));
   }
 
-  console.log(lakesArray);
   // console.log(allLakes);
 
   return (

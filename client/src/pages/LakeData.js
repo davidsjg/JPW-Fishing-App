@@ -22,7 +22,14 @@ export default function Lakes(props) {
 
   useEffect(() => {
     loadLakes();
+    loadWeather();
   }, []);
+
+  function loadWeather() {
+    API.getWeather().then((weather) => {
+      console.log(weather);
+    });
+  }
 
   function loadLakes() {
     let names = [];
@@ -34,7 +41,7 @@ export default function Lakes(props) {
         console.log(lake);
         newLakeData = lake.data.filter((data) => data.lake === historyLake);
         temp = newLakeData[0];
-        console.log(newLakeData[0]);
+
         setSelectedLake(temp);
 
         lake.data.map((lake) => {
@@ -49,8 +56,6 @@ export default function Lakes(props) {
 
   let newLakeData;
   let tempLake;
-
-  console.log(selectedLake);
 
   // lake
   // ? (newLakeData = lake.filter((data) => data.lake === historyLake))
