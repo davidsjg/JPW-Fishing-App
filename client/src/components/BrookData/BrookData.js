@@ -8,10 +8,6 @@ import SelectedContext from "../../utils/SelectedContext";
 export default function BrookData(props) {
   const { lake, fish, selectedLake, lakeNames } = useContext(SelectedContext);
 
-  console.log(lakeNames);
-
-  console.log(props);
-
   return (
     <>
       <Card style={{ width: "18rem" }} style={{ marginTop: 5 }}>

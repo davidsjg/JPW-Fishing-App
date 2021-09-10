@@ -18,18 +18,36 @@ export default function Lakes(props) {
   const [lakeNames, setLakeNames] = useState([]);
   const [lake, setLake] = useState({});
 
+  const [weather, setWeather] = useState({});
+  const [forecast, setForecast] = useState([]);
+
   let temp;
+  let dailyForecast = [];
 
   useEffect(() => {
     loadLakes();
-    loadWeather();
   }, []);
 
+  function handleButtonClick() {
+    loadWeather();
+  }
+
   function loadWeather() {
-    API.getWeather().then((weather) => {
-      console.log(weather);
+    API.getWeather().then((data) => {
+      setWeather({ data });
+      console.log(data);
+
+      alert("fuck");
+
+      data.data.daily.length > 0
+        ? data.data.daily.map((day) => {
+            dailyForecast.push(day);
+          })
+        : console.log("youre fucked");
     });
   }
+
+  setForecast(dailyForecast);
 
   function loadLakes() {
     let names = [];
@@ -56,6 +74,8 @@ export default function Lakes(props) {
 
   let newLakeData;
   let tempLake;
+
+  console.log(weather);
 
   // lake
   // ? (newLakeData = lake.filter((data) => data.lake === historyLake))
@@ -134,9 +154,13 @@ export default function Lakes(props) {
                 className={styles["linkButton"]}
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
+                onClick={handleButtonClick}
               >
-                Hiking Map
+                GET WEATHER
               </Button>
+              <div>
+                <span></span>
+              </div>
             </Row>
           </Col>
         </Row>
