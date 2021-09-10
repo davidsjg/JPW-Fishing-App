@@ -26,10 +26,12 @@ export default function Lakes(props) {
 
   useEffect(() => {
     loadLakes();
+    loadWeather();
   }, []);
 
   function handleButtonClick() {
-    loadWeather();
+    console.log(forecast);
+    console.log(weather);
   }
 
   function loadWeather() {
@@ -37,17 +39,14 @@ export default function Lakes(props) {
       setWeather({ data });
       console.log(data);
 
-      alert("fuck");
-
       data.data.daily.length > 0
         ? data.data.daily.map((day) => {
             dailyForecast.push(day);
+            setForecast(dailyForecast);
           })
         : console.log("youre fucked");
     });
   }
-
-  setForecast(dailyForecast);
 
   function loadLakes() {
     let names = [];
@@ -56,7 +55,7 @@ export default function Lakes(props) {
         setLake({ lake });
 
         // getFish(lake);
-        console.log(lake);
+
         newLakeData = lake.data.filter((data) => data.lake === historyLake);
         temp = newLakeData[0];
 
@@ -73,23 +72,23 @@ export default function Lakes(props) {
   let historyLake = props.match.params.lake;
 
   let newLakeData;
-  let tempLake;
-
-  console.log(weather);
+  // let tempLake;
 
   // lake
   // ? (newLakeData = lake.filter((data) => data.lake === historyLake))
   //   : console.log("no data yet");
   // console.log(newLakeData);
 
-  typeof newLakeData !== "undefined"
-    ? (tempLake = newLakeData[0])
-    : console.log("no data yet");
+  // typeof newLakeData !== "undefined"
+  //   ? (tempLake = newLakeData[0])
+  //   : console.log("no data yet");
 
   // typeof newLakeData !== "undefined" ? test() : console.log("no data yet");
 
   return (
-    <SelectedContext.Provider value={{ selectedLake, lake, fish, lakeNames }}>
+    <SelectedContext.Provider
+      value={{ selectedLake, lake, fish, lakeNames, weather, forecast }}
+    >
       <NavBarLake />
       <Contain>
         <Row cname="topRow">
@@ -159,7 +158,9 @@ export default function Lakes(props) {
                 GET WEATHER
               </Button>
               <div>
-                <span></span>
+                {forecast.length > 0 && (
+                  <span>{forecast[0].weather[0].description}</span>
+                )}
               </div>
             </Row>
           </Col>
