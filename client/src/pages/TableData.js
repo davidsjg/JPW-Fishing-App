@@ -6,28 +6,85 @@ import Row from "../components/Row/Row";
 import Col from "../components/Col/Col";
 import Table from "react-bootstrap/Table";
 
+{
+  /* {lakeArr !== []
+                  ? tempArr.map((lakeName) => {
+                      return console.log(lakeName);
+                    })
+                  : console.log("no data yet")} */
+}
+{
+  /* {lakeArr.map((lakeName) => {
+                  return alert(lakeName);
+                })} */
+}
+
 export default function TableData() {
   const [lake, setLake] = useState([]);
+  const [lakeArr, setLakeArr] = useState([]);
 
   let tempLake = [];
   let tempArr = ["peanuts", "salty", "yum"];
+  let testTrue = true;
 
   useEffect(() => {
     loadLakes();
   }, []);
 
-  let lakeArr;
+  let testArr = [
+    {
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+    },
+    {
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+    },
+    {
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+      junk: "junk",
+      food: "food",
+      daily: "daily",
+      bro: "bro",
+      yeah: "yeah",
+    },
+  ];
 
   function loadLakes() {
+    let lakeArr = [];
     API.getLakes()
       .then((lake) => {
         setLake([lake.data]);
         console.log(lake);
 
-        lake.data.map((lake) => {
-          lakeArr.push(lake);
-        });
+        {
+          lake.data.length > 0 &&
+            lake.data.map((lake) => {
+              lakeArr.push(lake);
+            });
+        }
         console.log(lakeArr);
+        setLakeArr(lakeArr);
       })
 
       .catch((err) => console.log(err));
@@ -55,23 +112,57 @@ export default function TableData() {
                   <th>Year</th>
                   <th>#CUTTs</th>
                   <th>Ave. Length</th>
-                  <th>Range</th>
+                  <th>Cutt Range</th>
                   <th>#BRK</th>
                   <th>Ave. Length</th>
-                  <th>Range</th>
-                  <th>Notes</th>
+                  <th>Brook Range</th>
                 </tr>
+                {/* {lakeArr.length > 0 && */}
+
+                {lakeArr.map((lake) => {
+                  return (
+                    <tr>
+                      <th>
+                        <a href={"/" + lake.lake}>{lake.lake}</a>
+                      </th>
+                      <th>{lake.acres === 0 ? "-" : lake.acres}</th>
+                      <th>{lake.year === 0 ? "-" : lake.year}</th>
+                      <th>{lake.numCuts === 0 ? "-" : lake.numCuts}</th>
+                      <th>
+                        {lake.cutAvgLength === 0 ? "-" : lake.cutAvgLength}
+                      </th>
+                      <th>{lake.cutRange === "" ? "-" : lake.cutRange}</th>
+                      <th>{lake.numBrooks === 0 ? "-" : lake.numBrooks}</th>
+                      <th>
+                        {lake.brkAvgLength === 0 ? "-" : lake.brkAvgLength}
+                      </th>
+                      <th>{lake.brkRange === "0" ? "-" : lake.brkRange}</th>
+                    </tr>
+                  );
+                })}
+
+                {/* {lakeArr.length > 0 &&
+                  lakeArr.map((lake) => {
+                    console.log(lake);
+                    return (
+                      <>
+                        <tr>
+                          <th>{lake.lake}</th>
+                          <th>{lake.acres}</th>
+                          <th>{lake.year}</th>
+                          <th>{lake.numCuts}</th>
+                          <th>{lake.cutAvgLength}</th>
+                          <th>{lake.cutRange}</th>
+                          <th>{lake.numBrooks}</th>
+                          <th>{lake.brkAvgLength}</th>
+                          <th>{lake.brkRange}</th>
+                          <th>{lake.year}</th>
+                        </tr>
+                      </>
+                    );
+                  })} */}
               </thead>
-              <tbody>
-                {lakeArr !== []
-                  ? tempArr.map((lakeName) => {
-                      return alert(lakeName);
-                    })
-                  : console.log("no data yet")}
-                {/* {lakeArr.map((lakeName) => {
-                  return alert(lakeName);
-                })} */}
-              </tbody>
+              <tbody></tbody>
             </Table>
           </Col>
           <Col size="md-2"></Col>
