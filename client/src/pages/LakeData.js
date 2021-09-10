@@ -99,11 +99,15 @@ export default function Lakes(props) {
   let newLakeData;
   let tempForecast;
   let tempFiveDay;
+  let tempTomorrow;
   let dayTemp;
   let curTemp;
 
   forecast.length > 0 &&
     (tempFiveDay = `http://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`);
+  forecast.length > 0 && console.log(tempFiveDay);
+  forecast.length > 0 &&
+    (tempTomorrow = `http://openweathermap.org/img/w/${forecast[1].weather[0].icon}.png`);
   forecast.length > 0 && console.log(tempFiveDay);
 
   forecast.length > 0 && (dayTemp = forecast[0].temp.day);
@@ -200,6 +204,8 @@ export default function Lakes(props) {
                     {windSpeed} MPH, {windDirection}
                   </p>
                 )}
+                Tomorrow:
+                {forecast.length > 0 && <img src={tempTomorrow} />}
               </div>
               {/* <Button
                 className={styles["linkButton"]}
