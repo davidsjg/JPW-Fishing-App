@@ -20,6 +20,8 @@ export default function Lakes(props) {
 
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState([]);
+  const [windSpeed, setWindSpeed] = useState();
+  const [windDirection, setWindDirection] = useState("");
 
   let temp;
   let dailyForecast = [];
@@ -28,21 +30,40 @@ export default function Lakes(props) {
     loadLakes();
   }, []);
 
-  function handleButtonClick() {
-    console.log(forecast);
-    console.log(weather);
-    loadWeather();
-  }
-
   function loadWeather() {
+    let windSpeed;
     API.getWeather().then((data) => {
       setWeather({ data });
+      console.log("returned data below");
+      console.log(data);
 
       data.data.daily.map((day) => {
         dailyForecast.push(day);
-        setForecast(dailyForecast);
       });
+      setForecast(dailyForecast);
+      windSpeed = data.data.daily[0].wind_speed;
+      setWindSpeed(windSpeed);
+
+      calcWind(data.data.daily[0].wind_deg, data.data.daily[0].wind_speed);
     });
+  }
+
+  function handleButtonClick() {
+    loadWeather();
+  }
+
+  function calcWind(direction, speed) {
+    setWindSpeed(speed);
+
+    {
+      if (direction > 270) {
+        setWindDirection("NW");
+      } else if (direction < 270 && direction > 180) {
+        setWindDirection("SW");
+      } else if (direction > 180 && direction > 90) {
+        setWindDirection("SE");
+      } else setWindDirection("NE");
+    }
   }
 
   function loadLakes() {
@@ -87,11 +108,23 @@ export default function Lakes(props) {
 
   typeof tempForecast !== "undefined"
     ? (tempForecast = forecast[0].weather[0].icon)
-    : console.log("balls");
+    : console.log();
+
+  console.log("wind direction =" + windDirection);
+  console.log("wind speed =" + windSpeed);
 
   return (
     <SelectedContext.Provider
-      value={{ selectedLake, lake, fish, lakeNames, weather, forecast }}
+      value={{
+        selectedLake,
+        lake,
+        fish,
+        lakeNames,
+        weather,
+        forecast,
+        windSpeed,
+        windDirection,
+      }}
     >
       <NavBarLake />
       <Contain>
@@ -138,6 +171,31 @@ export default function Lakes(props) {
           </Col>
           <Col cname="buttonContain" size="md-1">
             <Row>
+              <i>Current Weather</i>
+              <div style={{ textAlign: "center" }}>
+                {/* {forecast.length > 0 && (
+                  <span>{forecast[0].weather[0].description}</span>
+                )} */}
+                {forecast.length > 0 && console.log(forecast)}
+                {forecast.length > 0 && <img src={tempFiveDay} />}
+                {/* {forecast.length > 0 && <p>{(dayTemp - 273) * 1.8 + 32}</p>} */}
+                Temp:
+                {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
+                Wind:
+                {forecast.length > 0 && (
+                  <p>
+                    {windSpeed} {windDirection}
+                  </p>
+                )}
+              </div>
+              <Button
+                className={styles["linkButton"]}
+                onClick={() => window.open(selectedLake.map, "_blank")}
+                variant="secondary"
+                onClick={handleButtonClick}
+              >
+                GET WEATHER
+              </Button>
               <Button
                 className={styles["linkButton"]}
                 // href={selectedLake.trail}
@@ -151,25 +209,8 @@ export default function Lakes(props) {
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
               >
-                Weather
+                Trail Map
               </Button>
-              <Button
-                className={styles["linkButton"]}
-                onClick={() => window.open(selectedLake.map, "_blank")}
-                variant="secondary"
-                onClick={handleButtonClick}
-              >
-                GET WEATHER
-              </Button>
-              <div>
-                {forecast.length > 0 && (
-                  <span>{forecast[0].weather[0].description}</span>
-                )}
-                {forecast.length > 0 && console.log(forecast)}
-                {forecast.length > 0 && <img src={tempFiveDay} />}
-                {/* {forecast.length > 0 && <p>{(dayTemp - 273) * 1.8 + 32}</p>} */}
-                {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
-              </div>
             </Row>
           </Col>
         </Row>
