@@ -29,3 +29,8 @@
   height: auto;
   margin-top: 5px;
 }
+.weather {
+  border: 1px black solid;
+  margin-top: 5px;
+  border-radius: 5px;
+}

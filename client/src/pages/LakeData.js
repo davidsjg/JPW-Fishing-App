@@ -60,7 +60,7 @@ export default function Lakes(props) {
   // }
 
   function calcWind(direction, speed) {
-    setWindSpeed(speed);
+    setWindSpeed(speed.toFixed(0));
 
     {
       if (direction > 270) {
@@ -178,22 +178,26 @@ export default function Lakes(props) {
           </Col>
           <Col cname="buttonContain" size="md-1">
             <Row>
-              <i style={{ textAlign: "center" }}>Current Weather</i>
               <Br />
               <Br />
               <Br />
-              <div style={{ textAlign: "center" }}>
+              <div
+                className={styles["weather"]}
+                style={{ textAlign: "center" }}
+              >
+                <i style={{ textAlign: "center" }}>Current Weather</i>
                 {forecast.length > 0 && console.log(forecast)}
                 {forecast.length > 0 && <img src={tempFiveDay} />}
                 {cloud}
                 <Br />
                 <Br />
                 Temp:
+                <Br />
                 {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
                 Wind:
                 {forecast.length > 0 && (
                   <p>
-                    {windSpeed} {windDirection}
+                    {windSpeed} MPH, {windDirection}
                   </p>
                 )}
               </div>
