@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import Card from "react-bootstrap/card";
 import Table from "react-bootstrap/Table";
-import ListGroup from "react-bootstrap/ListGroup";
-import LakeContext from "../../utils/LakeContext";
+
 import SelectedContext from "../../utils/SelectedContext";
 
 export default function BrookData(props) {

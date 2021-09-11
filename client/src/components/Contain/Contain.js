@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Contain.module.css";
 
 function Contain(props) {
   let img = props.img;

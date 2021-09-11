@@ -1,5 +1,4 @@
 import React from "react";
-import Car from "react-bootstrap/Card";
 
 export default function GenCard() {
   return (

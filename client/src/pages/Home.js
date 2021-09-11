@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import styles from "./Home.module.css";
-import HomeCard from "../components/HomeCard/HomeCard";
 
 import LakeContainer from "../components/LakeContainer/LakeContainer";
 import LakeContext from "../utils/LakeContext";

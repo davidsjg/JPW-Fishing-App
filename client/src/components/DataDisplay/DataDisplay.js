@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Row from "../Row/Row";
 import Col from "../Col/Col";
 import Container from "react-bootstrap/esm/Container";
-import styles from "./DataDisplay.module.css";
+
 import SelectedContext from "../../utils/SelectedContext";
 
 export default function DataDisplay() {

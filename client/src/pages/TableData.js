@@ -6,69 +6,17 @@ import Row from "../components/Row/Row";
 import Col from "../components/Col/Col";
 import Table from "react-bootstrap/Table";
 
-{
-  /* {lakeArr !== []
-                  ? tempArr.map((lakeName) => {
-                      return console.log(lakeName);
-                    })
-                  : console.log("no data yet")} */
-}
-{
-  /* {lakeArr.map((lakeName) => {
-                  return alert(lakeName);
-                })} */
-}
-
 export default function TableData() {
   const [lake, setLake] = useState([]);
   const [lakeArr, setLakeArr] = useState([]);
 
   let tempLake = [];
-  let tempArr = ["peanuts", "salty", "yum"];
+
   let testTrue = true;
 
   useEffect(() => {
     loadLakes();
   }, []);
-
-  let testArr = [
-    {
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-    },
-    {
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-    },
-    {
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-      junk: "junk",
-      food: "food",
-      daily: "daily",
-      bro: "bro",
-      yeah: "yeah",
-    },
-  ];
 
   function loadLakes() {
     let lakeArr = [];
@@ -140,27 +88,6 @@ export default function TableData() {
                     </tr>
                   );
                 })}
-
-                {/* {lakeArr.length > 0 &&
-                  lakeArr.map((lake) => {
-                    console.log(lake);
-                    return (
-                      <>
-                        <tr>
-                          <th>{lake.lake}</th>
-                          <th>{lake.acres}</th>
-                          <th>{lake.year}</th>
-                          <th>{lake.numCuts}</th>
-                          <th>{lake.cutAvgLength}</th>
-                          <th>{lake.cutRange}</th>
-                          <th>{lake.numBrooks}</th>
-                          <th>{lake.brkAvgLength}</th>
-                          <th>{lake.brkRange}</th>
-                          <th>{lake.year}</th>
-                        </tr>
-                      </>
-                    );
-                  })} */}
               </thead>
               <tbody></tbody>
             </Table>

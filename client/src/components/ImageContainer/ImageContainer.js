@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./ImageContainer.module.css";
 
 function ImageContainer(props) {
   return (

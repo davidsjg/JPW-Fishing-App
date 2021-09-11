@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "react-bootstrap/Card";
+
 import SelectedContext from "../../utils/SelectedContext";
 import Image from "react-bootstrap/Image";
 import styles from "./LakeImage.module.css";
