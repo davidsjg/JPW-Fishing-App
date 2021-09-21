@@ -23,9 +23,9 @@ export default function DropdownBar(props) {
           className={styles["ddBar"]}
           // onSelect={handleSelect}
         >
-          {lakeNames.map((lakeName) => {
+          {lakeNames.map((lakeName, i) => {
             return (
-              <Dropdown.Item eventKey={lakeName} href={"/" + lakeName}>
+              <Dropdown.Item eventKey={lakeName} key={i} href={"/" + lakeName}>
                 {lakeName}
               </Dropdown.Item>
             );

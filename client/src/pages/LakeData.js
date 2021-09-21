@@ -142,26 +142,24 @@ export default function Lakes(props) {
       <Contain>
         <Row cname="topRow">
           <Col size="md-3" cname="align-content-center">
-            <disp className={styles["aBorder"]}>
-              <disp className={styles["bigDisp"]}>
+            <p className={styles["aBorder"]}>
+              <p className={styles["bigDisp"]}>
                 Survey Year: {selectedLake.year}
-              </disp>
+              </p>
               <br />
-            </disp>
+            </p>
           </Col>
           <Col size="md-6" cname="lakeDataDisp">
-            <disp className={styles["aBorder"]}>
-              <disp className={styles["bigDisp1"]}>{selectedLake.lake}</disp>
+            <p className={styles["aBorder"]}>
+              <p className={styles["bigDisp1"]}>{selectedLake.lake}</p>
               <br></br>
-            </disp>
+            </p>
           </Col>
           <Col size="md-3">
-            <disp className={styles["aBorder"]} style={{ float: "right" }}>
-              <disp className={styles["bigDisp"]}>
-                Acres: {selectedLake.acres}
-              </disp>
+            <p className={styles["aBorder"]} style={{ float: "right" }}>
+              <p className={styles["bigDisp"]}>Acres: {selectedLake.acres}</p>
               <br></br>
-            </disp>
+            </p>
           </Col>
         </Row>
         <Row>
