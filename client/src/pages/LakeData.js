@@ -30,6 +30,7 @@ export default function Lakes(props) {
 
   useEffect(() => {
     loadLakes();
+    loadWeather();
   }, []);
 
   function loadWeather() {
@@ -54,10 +55,10 @@ export default function Lakes(props) {
     });
   }
 
-  function handleButtonClick() {
-    loadWeather();
-    console.log("SUP You CLICKED THAT BOOTAHN");
-  }
+  // function handleButtonClick() {
+  //   loadWeather();
+  //   console.log("SUP You CLICKED THAT BOOTAHN");
+  // }
 
   function calcWind(direction, speed) {
     setWindSpeed(speed.toFixed(0));
@@ -209,14 +210,14 @@ export default function Lakes(props) {
                 Tomorrow:
                 {forecast.length > 0 && <img src={tempTomorrow} />}
               </div>
-              <Button
+              {/* <Button
                 className={styles["linkButton"]}
                 onClick={() => window.open(selectedLake.map, "_blank")}
                 variant="secondary"
                 onClick={handleButtonClick}
               >
                 GET WEATHER
-              </Button>
+              </Button> */}
               <Button
                 className={styles["linkButton"]}
                 // href={selectedLake.trail}
