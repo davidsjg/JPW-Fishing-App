@@ -39,8 +39,6 @@ export default function Lakes(props) {
 
     API.getWeather().then((data) => {
       setWeather({ data });
-      console.log("returned data below");
-      console.log(data);
 
       data.data.daily.map((day) => {
         dailyForecast.push(day);
