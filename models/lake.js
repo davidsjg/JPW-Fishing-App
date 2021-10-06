@@ -12,10 +12,10 @@ const lakeSchema = new Schema({
   numBrooks: { type: Number },
   brkAvgLength: { type: Number },
   brkRange: { type: String },
-  splake: { type: Boolean },
-  rainbow: { type: Boolean },
-  lakeTrout: { type: Boolean },
   distance: { type: Number },
+  img: { type: String },
+  trail: { type: String },
+  map: { type: String },
 });
 
 const Lake = mongoose.model("Lake", lakeSchema);

@@ -6,6 +6,7 @@ import styles from "./LakeImage.module.css";
 
 export default function LakeImage(props) {
   const { lake, fish, selectedLake } = useContext(SelectedContext);
+  console.log(selectedLake);
   return (
     <>
       <Image
