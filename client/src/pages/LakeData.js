@@ -28,6 +28,9 @@ export default function Lakes(props) {
   let temp;
   let dailyForecast = [];
 
+  console.log("process.env.node_env below");
+  console.log(process.env.NODE_ENV);
+
   useEffect(() => {
     loadLakes();
     loadWeather();
@@ -140,24 +143,26 @@ export default function Lakes(props) {
       <Contain>
         <Row cname="topRow">
           <Col size="md-3" cname="align-content-center">
-            <p className={styles["aBorder"]}>
-              <p className={styles["bigDisp"]}>
+            <span className={styles["aBorder"]}>
+              <span className={styles["bigDisp"]}>
                 Survey Year: {selectedLake.year}
-              </p>
+              </span>
               <br />
-            </p>
+            </span>
           </Col>
           <Col size="md-6" cname="lakeDataDisp">
-            <p className={styles["aBorder"]}>
-              <p className={styles["bigDisp1"]}>{selectedLake.lake}</p>
+            <span className={styles["aBorder"]}>
+              <span className={styles["bigDisp1"]}>{selectedLake.lake}</span>
               <br></br>
-            </p>
+            </span>
           </Col>
           <Col size="md-3">
-            <p className={styles["aBorder"]} style={{ float: "right" }}>
-              <p className={styles["bigDisp"]}>Acres: {selectedLake.acres}</p>
+            <span className={styles["aBorder"]} style={{ float: "right" }}>
+              <span className={styles["bigDisp"]}>
+                Acres: {selectedLake.acres}
+              </span>
               <br></br>
-            </p>
+            </span>
           </Col>
         </Row>
         <Row>
@@ -196,12 +201,12 @@ export default function Lakes(props) {
                 <Br />
                 Temp:
                 <Br />
-                {forecast.length > 0 && <p>{curTemp.toFixed(0)}F</p>}
+                {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>}
                 Wind:
                 {forecast.length > 0 && (
-                  <p>
+                  <span>
                     {windSpeed} MPH, {windDirection}
-                  </p>
+                  </span>
                 )}
                 Tomorrow:
                 {forecast.length > 0 && <img src={tempTomorrow} />}

@@ -12,6 +12,9 @@ app.use(express.json());
 
 app.use(routes);
 
+console.log("process.env.node_env below");
+console.log(process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
