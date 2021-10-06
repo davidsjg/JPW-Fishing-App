@@ -3,9 +3,9 @@ import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
 import ContainTest from "../components/ContainTest/ContainTest";
 import Row from "../components/Row/Row";
-import NavBarLake from "../components/NavBarLake/NavBarLake";
 import LakeDetailCard from "../components/LakeDetailCard/LakeDetailCard";
 import API from "../utils/API";
+import NavBarLake from "../components/NavBarLake/NavBarLake";
 
 export default function Lakes() {
   const [selectedLake, setSelectedLake] = useState({});
