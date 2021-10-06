@@ -1,6 +1,7 @@
 {
   "name": "jpw",
   "version": "1.0.0",
+  "homepage": "https://fathomless-crag-56888.herokuapp.com/",
   "engines": {
     "node": "14.15.4"
   },
