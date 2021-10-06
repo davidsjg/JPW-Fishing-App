@@ -202,12 +202,17 @@ export default function Lakes(props) {
                 Temp:
                 <Br />
                 {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>}
+                <Br />
+                <Br />
                 Wind:
+                <Br />
                 {forecast.length > 0 && (
                   <span>
                     {windSpeed} MPH, {windDirection}
                   </span>
                 )}
+                <Br />
+                <Br />
                 Tomorrow:
                 {forecast.length > 0 && <img src={tempTomorrow} />}
               </div>

@@ -7,6 +7,9 @@ import SelectedContext from "../../utils/SelectedContext";
 export default function LakeDropdown(props) {
   const { lake, fish, lakeNames, selectedLake } = useContext(SelectedContext);
 
+  console.log("lakeNames below");
+  console.log(lakeNames);
+
   return (
     <>
       <Dropdown className={styles["center1"]} style={{ marginTop: 1 }}>

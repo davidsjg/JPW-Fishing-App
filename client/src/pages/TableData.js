@@ -67,24 +67,32 @@ export default function TableData() {
                 </tr>
                 {/* {lakeArr.length > 0 && */}
 
-                {lakeArr.map((lake) => {
+                {lakeArr.map((lake, index) => {
                   return (
-                    <tr>
-                      <th>
+                    <tr key={index}>
+                      <th key={19}>
                         <a href={"/" + lake.lake}>{lake.lake}</a>
                       </th>
-                      <th>{lake.acres === 0 ? "-" : lake.acres}</th>
-                      <th>{lake.year === 0 ? "-" : lake.year}</th>
-                      <th>{lake.numCuts === 0 ? "-" : lake.numCuts}</th>
-                      <th>
+                      <th key={10}>{lake.acres === 0 ? "-" : lake.acres}</th>
+                      <th key={11}>{lake.year === 0 ? "-" : lake.year}</th>
+                      <th key={12}>
+                        {lake.numCuts === 0 ? "-" : lake.numCuts}
+                      </th>
+                      <th key={13}>
                         {lake.cutAvgLength === 0 ? "-" : lake.cutAvgLength}
                       </th>
-                      <th>{lake.cutRange === "" ? "-" : lake.cutRange}</th>
-                      <th>{lake.numBrooks === 0 ? "-" : lake.numBrooks}</th>
-                      <th>
+                      <th key={14}>
+                        {lake.cutRange === "" ? "-" : lake.cutRange}
+                      </th>
+                      <th key={15}>
+                        {lake.numBrooks === 0 ? "-" : lake.numBrooks}
+                      </th>
+                      <th key={16}>
                         {lake.brkAvgLength === 0 ? "-" : lake.brkAvgLength}
                       </th>
-                      <th>{lake.brkRange === "0" ? "-" : lake.brkRange}</th>
+                      <th key={17}>
+                        {lake.brkRange === "0" ? "-" : lake.brkRange}
+                      </th>
                     </tr>
                   );
                 })}

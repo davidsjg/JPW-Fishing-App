@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, Fragment } from "react";
 import Col from "../components/Col/Col";
 import Contain from "../components/Contain/Contain";
 import ContainTest from "../components/ContainTest/ContainTest";
@@ -59,7 +59,7 @@ export default function Lakes() {
         <Row>
           {lakesArray.map((lake, index) => {
             return (
-              <>
+              <React.Fragment key={index}>
                 <Col
                   size="md-4"
                   style={{ justifyContent: "center" }}
@@ -68,7 +68,7 @@ export default function Lakes() {
                 >
                   <LakeDetailCard key={lake} props={lake} />
                 </Col>
-              </>
+              </React.Fragment>
             );
           })}
         </Row>
