@@ -57,15 +57,16 @@ export default function Lakes() {
       <NavBarLake />
       <Contain>
         <Row>
-          {lakesArray.map((lake) => {
+          {lakesArray.map((lake, index) => {
             return (
               <>
                 <Col
                   size="md-4"
                   style={{ justifyContent: "center" }}
                   style={{ display: "flex" }}
+                  key={lake.id}
                 >
-                  <LakeDetailCard eventKey={lake} props={lake} />
+                  <LakeDetailCard key={lake} props={lake} />
                 </Col>
               </>
             );
