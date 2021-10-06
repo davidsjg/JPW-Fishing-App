@@ -1,0 +1,242 @@
+[ 
+{
+    "lake": "Arapahoe (Lower)",
+    "acres": 11,
+    "year": 2008,
+    "fish": ["Cutthroat"],
+    "numCuts": 5,
+    "cutAvgLength": 11.2,
+    "cutRange": "8.5-14.4",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 10,
+    "img": "https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5323244.jpg",
+    "trail":
+        "https://www.alltrails.com/trail/us/colorado/arapaho-lakes-via-rogers-pass-trail-and-forest-lakes-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/arapaho-lakes-via-rogers-pass-trail-and-forest-lakes-trail?mobileMap=false&ref=sidebar-static-map"
+},
+{
+    "lake": "Crater Lake - Mid-North",
+    "acres": 12,
+    "year": 2012,
+    "fish": ["Brook"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 21,
+    "brkAvgLength": 10,
+    "brkRange": "6.7-12.5",
+    "distance": 8,
+    "img": "https://i.imgur.com/HMZ4YHm.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+
+  {
+    "lake": "Crater Lake - Mid-South",
+    "acres": 6,
+    "year": 2012,
+    "fish": ["Brook", "Splake"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 38,
+    "brkAvgLength": 8.6,
+    "brkRange": "3.7-13.2",
+    "distance": 6,
+    "img": "https://i.imgur.com/aBidlhP.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/crater-lakes-trail-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Clayton Lake",
+    "acres": 4,
+    "year": 2012,
+    "fish": ["Cutthroat"],
+    "numCuts": 5,
+    "cutAvgLength": 8.8,
+    "cutRange": "7.0-10.3",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 11,
+    "img": "https://i.imgur.com/8fMeLeY.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Forest Lake 1",
+    "acres": 5,
+    "year": 2008,
+    "fish": ["Brook"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 11,
+    "brkAvgLength": 11.4,
+    "brkRange": "8.5-15.7",
+    "distance": 6,
+    "img": "https://cdn-assets.alltrails.com/uploads/photo/image/39972598/extra_large_a08e572c3e9bb9e65c08d71ecb257486.jpg",
+    "trail": "https://www.alltrails.com/trail/us/colorado/forest-lakes-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/forest-lakes-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Forest Lake 3",
+    "acres": 3,
+    "year": 2008,
+    "fish": ["Brook"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 19,
+    "brkAvgLength": 9.1,
+    "brkRange": "6.3-10.7",
+    "distance": 6,
+    "img": "https://i.imgur.com/kujnz8E.jpg",
+    "trail": "https://www.alltrails.com/trail/us/colorado/forest-lakes-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/forest-lakes-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Heart Lake",
+    "acres": 5,
+    "year": 2012,
+    "fish": ["Cutthroat"],
+    "numCuts": 17,
+    "cutAvgLength": 12.6,
+    "cutRange": "5.8-17.1",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 12,
+    "img": "https://i.imgur.com/WvcNsBX.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/heart-lake-via-south-boulder-creek-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/heart-lake-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Iceberg North",
+    "acres": 9,
+    "year": 2013,
+    "fish": ["Cutthroat"],
+    "numCuts": 9,
+    "cutAvgLength": 9.9,
+    "cutRange": "7.7-13.1",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 15,
+    "img": "https://i.imgur.com/zVM3t5O.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Iceberg South",
+    "acres": 6,
+    "year": 2013,
+    "fish": ["Cutthroat"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": 0,
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 15,
+    "img": "https://peakvisor.com/img/news/upper-crater-lake.jpg"
+  },
+  {
+    "lake": "James Peak Lake",
+    "acres": 7,
+    "year": 2013,
+    "fish": ["Cutthroat"],
+    "numCuts": 27,
+    "cutAvgLength": 9.2,
+    "cutRange": "4.5-16.1",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 15,
+    "img": "https://cdn-assets.alltrails.com/uploads/photo/image/19174780/extra_large_7d0fe888c28b31d3d992fc1d34de51c6.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/clayton-lake-james-peak-wilderness",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/clayton-lake-james-peak-wilderness?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Jenny Lake",
+    "acres": 6,
+    "year": 2008,
+    "fish": ["Brook", "Rainbow"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 8,
+    "brkAvgLength": 9.6,
+    "brkRange": "7.8-10.6",
+    "distance": 14,
+    "img": "https://i.imgur.com/OR12Ylf.jpg",
+    "trail": "https://www.alltrails.com/trail/us/colorado/rollins-pass",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/rollins-pass?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Little Echo Lake",
+    "acres": 11,
+    "year": 2013,
+    "fish": ["Brook", "Splake", "Lake"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+    "distance": 14,
+    "img": "http://www.craigfagerness.com/images/DSC09893.JPG",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/james-peak-north-east-ridge-via-little-echo-lake",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/james-peak-north-east-ridge-via-little-echo-lake?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Lost Lake",
+    "acres": 5,
+    "year": 2013,
+    "fish": ["Brook"],
+    "numCuts": 0,
+    "cutAvgLength": 0,
+    "cutRange": "",
+    "numBrooks": 49,
+    "brkAvgLength": 9.6,
+    "brkRange": "5.7-12.2",
+    "distance": 14,
+    "img": "https://dayhikesneardenver.b-cdn.net/wp-content/uploads/2018/08/lost-lake-near-nederland-ccfrazier.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/lost-lake-via-hessie-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/lost-lake-via-hessie-trail?mobileMap=false&ref=sidebar-static-map"
+  },
+  {
+    "lake": "Roger's Pass Lake",
+    "acres": 5,
+    "year": 2012,
+    "fish": ["Cutthroat"],
+    "numCuts": 10,
+    "cutAvgLength": 9.1,
+    "cutRange": "5.9-11.6",
+    "numBrooks": 0,
+    "brkAvgLength": 0,
+    "brkRange": 0,
+
+    "distance": 13,
+    "img": "https://www.protrails.com/protrails/galleries/Iceberg%20Lakes%20Loop%20-%20rogers%20peak%20lake%20morning%20550.jpg",
+    "trail":
+      "https://www.alltrails.com/trail/us/colorado/rogers-pass-lake-via-south-boulder-creek-trail",
+    "map": "https://www.alltrails.com/explore/trail/us/colorado/rogers-pass-lake-via-south-boulder-creek-trail?mobileMap=false&ref=sidebar-static-map"
+  }
+]
