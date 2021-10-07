@@ -16,14 +16,14 @@ console.log("process.env.node_env below");
 console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {
-    res.send(alert("API RUNNING JENNAYYY"));
+    res.send("API RUNNING JENNAYYY");
   });
 }
 
