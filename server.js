@@ -1,48 +1,24 @@
-require("dotenv").config({ path: "./config.env" });
-const path = require("path");
 const express = require("express");
-const connectDB = require("./config/db");
+
+const mongoose = require("mongoose");
 const routes = require("./routes");
-
-connectDB();
-
 const app = express();
+const PORT = process.env.PORT || 3001;
 
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+// Add API routes
 app.use(routes);
 
-console.log("process.env.node_env below");
-console.log(process.env.NODE_ENV);
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/jpwFishingDB");
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client", "build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.send("API RUNNING JENNAYYY");
-  });
-}
-
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// // Define middleware here
-// app.use(express.urlencoded({ extended: true }));
-
-// // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
-// // // Add API routes
-
-// // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/jpwFishingDB");
-
-// // Start the API server
-// app.listen(PORT, function () {
-//   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-// });
+// Start the API server
+app.listen(PORT, function () {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});

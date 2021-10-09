@@ -10,8 +10,8 @@ import CutData from "../components/CutData/CutData";
 import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
 import styles from "./LakeData.module.css";
-import NavBarLake from "../components/NavBarLake/NavBarLake";
 import Button from "react-bootstrap/Button";
+import NavBarLake from "../components/NavBarLake/NavBarLake";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
