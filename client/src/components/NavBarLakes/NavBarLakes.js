@@ -7,7 +7,7 @@ import Contain from "../Contain/Contain";
 import Col from "../Col/Col";
 import ColLogo from "../Col/Col";
 import JPWlogo from "./JPWlogo.png";
-import styles from "./NavBarLake.module.css";
+import styles from "./NavBarLakes.module.css";
 import Row from "../Row/Row";
 import Image from "react-bootstrap/Image";
 import LakeDropdown from "../LakeDropdown/LakeDropdown";
