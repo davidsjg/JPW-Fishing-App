@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import Card from "react-bootstrap/card";
+import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
 import LakeContext from "../../utils/LakeContext";
