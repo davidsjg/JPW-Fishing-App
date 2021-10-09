@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "react-bootstrap/card";
+import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 
 import SelectedContext from "../../utils/SelectedContext";
