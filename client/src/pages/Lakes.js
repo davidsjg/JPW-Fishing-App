@@ -17,7 +17,7 @@ export default function Lakes() {
   let temp;
   let historyLake;
   let newLakeData;
-  let tempLake;
+
   let allLakes = [];
 
   useEffect(() => {
