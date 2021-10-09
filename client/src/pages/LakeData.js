@@ -11,7 +11,7 @@ import BrookData from "../components/BrookData/BrookData";
 import API from "../utils/API";
 import styles from "./LakeData.module.css";
 import Button from "react-bootstrap/Button";
-import NavBarLake from "../components/NavBarLake/NavBarLake";
+import NavBarLakes from "../components/NavBarLakes/NavBarLakes";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -139,7 +139,7 @@ export default function Lakes(props) {
         windDirection,
       }}
     >
-      <NavBarLake />
+      <NavBarLakes />
       <Contain>
         <Row cname="topRow">
           <Col size="md-3" cname="align-content-center">
