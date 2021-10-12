@@ -5,7 +5,7 @@ import ContainTest from "../components/ContainTest/ContainTest";
 import Row from "../components/Row/Row";
 import LakeDetailCard from "../components/LakeDetailCard/LakeDetailCard";
 import API from "../utils/API";
-import NavBarLakes from "../components/NavBarLakes/NavBarLakes";
+import NavBarLakes2 from "../components/NavBarLakes2/NavBarLakes2";
 
 export default function Lakes() {
   const [selectedLake, setSelectedLake] = useState({});
@@ -54,7 +54,7 @@ export default function Lakes() {
 
   return (
     <>
-      <NavBarLakes />
+      <NavBarLakes2 lakeNames={lakeNames} />
       <Contain>
         <Row>
           {lakesArray.map((lake, index) => {

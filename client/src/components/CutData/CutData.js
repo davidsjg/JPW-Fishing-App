@@ -21,15 +21,17 @@ export default function CutData(props) {
           <Table bordered>
             <tbody style={{ fontSize: 13 }}>
               <tr>
-                <td>Number of Cutthroat Trout:</td>
+                <td style={{ textAlign: "center" }}>
+                  Number of Cutthroat Trout:
+                </td>
                 <td style={{ textAlign: "center" }}>{selectedLake.numCuts}</td>
               </tr>
               <tr>
-                <td>Size Range:</td>
+                <td style={{ textAlign: "center" }}>Size Range:</td>
                 <td style={{ textAlign: "center" }}>{selectedLake.cutRange}</td>
               </tr>
               <tr>
-                <td>Average Size:</td>
+                <td style={{ textAlign: "center" }}>Average Size:</td>
                 <td style={{ textAlign: "center" }}>
                   {selectedLake.cutAvgLength}
                 </td>

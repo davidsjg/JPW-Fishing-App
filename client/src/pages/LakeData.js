@@ -140,7 +140,7 @@ export default function Lakes(props) {
         windDirection,
       }}
     >
-      <NavBarLakes />
+      <NavBarLakes lakeNames={lakeNames} />
       <Contain>
         <GenCard selectedLake={selectedLake} />
 

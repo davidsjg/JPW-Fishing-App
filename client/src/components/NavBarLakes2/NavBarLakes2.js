@@ -7,14 +7,14 @@ import Contain from "../Contain/Contain";
 import Col from "../Col/Col";
 import ColLogo from "../Col/Col";
 import JPWlogo from "./JPWlogo.png";
-import styles from "./NavBarLakes.module.css";
+import styles from "./NavBarLakes2.module.css";
 import Row from "../Row/Row";
 import Image from "react-bootstrap/Image";
 import LakeDropdown from "../LakeDropdown/LakeDropdown";
 
 // import styles from "./NavigationBar.module.css";
 
-export default function NavBarLakes(props) {
+export default function NavBarLakes2(props) {
   return (
     <Navbar className={styles["navBorder"]}>
       <Container>

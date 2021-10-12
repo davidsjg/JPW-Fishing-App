@@ -29,17 +29,17 @@ export default function BrookData(props) {
           <Table bordered>
             <tbody style={{ fontSize: 13 }}>
               <tr>
-                <td>Number of Brook Trout:</td>
+                <td style={{ textAlign: "center" }}>Number of Brook Trout:</td>
                 <td style={{ textAlign: "center" }}>
                   {selectedLake.numBrooks}
                 </td>
               </tr>
               <tr>
-                <td>Size Range:</td>
+                <td style={{ textAlign: "center" }}>Size Range:</td>
                 <td style={{ textAlign: "center" }}>{selectedLake.brkRange}</td>
               </tr>
               <tr>
-                <td>Average Size:</td>
+                <td style={{ textAlign: "center" }}>Average Size:</td>
                 <td style={{ textAlign: "center" }}>
                   {selectedLake.brkAvgLength}
                 </td>

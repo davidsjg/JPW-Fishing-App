@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import styles from "./LakeDropdown.module.css";
-import SelectedContext from "../../utils/SelectedContext";
+import Button from "react-bootstrap/Button";
 
 export default function LakeDropdown(props) {
-  const { lake, fish, lakeNames, selectedLake } = useContext(SelectedContext);
-
-  console.log("lakeNames below");
-  console.log(lakeNames);
+  let lakeNames = props.props.lakeNames;
+  function handleClick() {
+    console.log(props);
+  }
 
   return (
     <>
