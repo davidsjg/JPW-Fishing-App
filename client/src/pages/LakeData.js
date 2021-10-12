@@ -12,6 +12,7 @@ import API from "../utils/API";
 import styles from "./LakeData.module.css";
 import Button from "react-bootstrap/Button";
 import NavBarLakes from "../components/NavBarLakes/NavBarLakes";
+import GenCard from "../components/GenCard/GenCard";
 
 export default function Lakes(props) {
   const [selectedLake, setSelectedLake] = useState({});
@@ -141,30 +142,8 @@ export default function Lakes(props) {
     >
       <NavBarLakes />
       <Contain>
-        <Row cname="topRow">
-          <Col size="md-3" cname="align-content-center">
-            <span className={styles["aBorder"]}>
-              <span className={styles["bigDisp"]}>
-                Survey Year: {selectedLake.year}
-              </span>
-              <br />
-            </span>
-          </Col>
-          <Col size="md-6" cname="lakeDataDisp">
-            <span className={styles["aBorder"]}>
-              <span className={styles["bigDisp1"]}>{selectedLake.lake}</span>
-              <br></br>
-            </span>
-          </Col>
-          <Col size="md-3">
-            <span className={styles["aBorder"]} style={{ float: "right" }}>
-              <span className={styles["bigDisp"]}>
-                Acres: {selectedLake.acres}
-              </span>
-              <br></br>
-            </span>
-          </Col>
-        </Row>
+        <GenCard selectedLake={selectedLake} />
+
         <Row>
           <Col size="md-3">
             <Row>
