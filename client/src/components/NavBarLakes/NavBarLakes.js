@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Contain from "../Contain/Contain";
+
 import Col from "../Col/Col";
-import ColLogo from "../Col/Col";
+
 import JPWlogo from "./JPWlogo.png";
 import styles from "./NavBarLakes.module.css";
 import Row from "../Row/Row";

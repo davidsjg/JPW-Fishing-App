@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import styles from "./LakeDropdown.module.css";
-import Button from "react-bootstrap/Button";
 
 export default function LakeDropdown(props) {
   let lakeNames = props.props.lakeNames;
