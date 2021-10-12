@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import styles from "./BrookData.module.css";
 
 import SelectedContext from "../../utils/SelectedContext";
 
@@ -23,11 +24,7 @@ export default function BrookData(props) {
         />
 
         {selectedLake.brkAvgLength === 0 ? (
-          <Card>
-            <Card.Body style={{ textAlign: "center" }}>
-              No Brook Trout Data
-            </Card.Body>
-          </Card>
+          <p className={styles["noData"]}>No Brook Trout Data</p>
         ) : (
           <Table bordered>
             <tbody style={{ fontSize: 13 }}>

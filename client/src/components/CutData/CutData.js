@@ -4,6 +4,7 @@ import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
 import LakeContext from "../../utils/LakeContext";
 import SelectedContext from "../../utils/SelectedContext";
+import styles from "./CutData.module.css";
 
 export default function CutData(props) {
   const { lake, fish, selectedLake, lakeNames } = useContext(SelectedContext);
@@ -15,11 +16,7 @@ export default function CutData(props) {
           src="http://westernnativetrout.org/wp-content/uploads/2019/07/greenback-cutthroat.jpg"
         />
         {selectedLake.cutAvgLength === 0 ? (
-          <Card>
-            <Card.Body style={{ textAlign: "center" }}>
-              No Cutthroat Data
-            </Card.Body>
-          </Card>
+          <p className={styles["noData"]}>No Cutthroat Data</p>
         ) : (
           <Table bordered>
             <tbody style={{ fontSize: 13 }}>
