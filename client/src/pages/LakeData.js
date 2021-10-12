@@ -145,6 +145,13 @@ export default function Lakes(props) {
         <GenCard selectedLake={selectedLake} />
 
         <Row>
+          <Col size="md-8">
+            <Row>
+              <ImageContainer>
+                <LakeImage style={{ float: "left" }} />
+              </ImageContainer>
+            </Row>
+          </Col>
           <Col size="md-3">
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
@@ -154,13 +161,6 @@ export default function Lakes(props) {
             </Row>
           </Col>
 
-          <Col size="md-8">
-            <Row>
-              <ImageContainer>
-                <LakeImage style={{ float: "left" }} />
-              </ImageContainer>
-            </Row>
-          </Col>
           <Col cname="buttonContain" size="md-1">
             <Row>
               <Br />
@@ -173,6 +173,7 @@ export default function Lakes(props) {
                 <i style={{ textAlign: "center", textDecoration: "underline" }}>
                   Current Weather
                 </i>
+                <Br />
                 {forecast.length > 0 && console.log(forecast)}
                 {forecast.length > 0 && <img src={tempFiveDay} />}
                 {cloud}
@@ -193,6 +194,7 @@ export default function Lakes(props) {
                 <Br />
                 <Br />
                 Tomorrow:
+                <Br />
                 {forecast.length > 0 && <img src={tempTomorrow} />}
               </div>
               {/* <Button
