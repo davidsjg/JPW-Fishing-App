@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import styles from "./GenCard.module.css";
 import Br from "../Br/Br";
 import API from "../../utils/API";
-import Contain from "../Contain/Contain";
 
 export default function GenCard(props) {
   const [weather, setWeather] = useState({});
@@ -78,72 +77,62 @@ export default function GenCard(props) {
     : console.log();
 
   return (
-    <>
-      <Card>
+    <Row>
+      <Card
+        className={styles["headerCard"]}
+        style={{ width: "18rem" }}
+        style={{ alignItems: "center" }}
+      >
+        <Col size="md-6" cname="lakeDataDisp">
+          <span>
+            <span>{props.selectedLake.lake}</span>
+            <br></br>
+          </span>
+        </Col>
+        <Col size="md-3" cname="align-content-center">
+          <span>
+            <span>Survey Year: {props.selectedLake.year}</span>
+            <br />
+          </span>
+        </Col>
+        <Col size="md-3">
+          <span style={{ float: "right" }}>
+            <span>Acres: {props.selectedLake.acres}</span>
+            <br></br>
+          </span>
+        </Col>
+
         <Row>
-          <Col
-            size="md-6"
-            cname="lakeDataDisp"
-            style={{ textAlign: "center", marginTop: 11 }}
-          >
-            {/* <Contain mainContain="mainContain"> */}
-            <span>
-              <span>{props.selectedLake.lake}</span>
-              <br></br>
-            </span>
-            <span>
-              <span>Survey Year: {props.selectedLake.year}</span>
-              <br />
-            </span>
-            <span>
-              <span>Acres: {props.selectedLake.acres}</span>
-              <br></br>
-            </span>
-          </Col>
-          <Col style={{ textAlign: "center", borderLeft: "solid" }}>
-            <i style={{ textDecoration: "underline" }}>Current Weather:</i>
+          <div className={styles["weather"]} style={{ textAlign: "center" }}>
+            <i style={{ textAlign: "center", textDecoration: "underline" }}>
+              Current Weather
+            </i>
+            <Br />
             {forecast.length > 0 && console.log(forecast)}
             {forecast.length > 0 && <img src={tempFiveDay} />}
             {cloud}
             <Br />
+            <Br />
             Temp:
-            {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} | Wind:
+            <Br />
+            {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>}
+            <Br />
+            <Br />
+            Wind:
+            <Br />
             {forecast.length > 0 && (
               <span>
                 {windSpeed} MPH, {windDirection}
               </span>
-            )}{" "}
-            | Tomorrow:
+            )}
+            <Br />
+            <Br />
+            Tomorrow:
+            <Br />
             {forecast.length > 0 && <img src={tempTomorrow} />}
-            {/* </Contain> */}
-          </Col>
+          </div>
         </Row>
       </Card>
-    </>
+    </Row>
   );
 }
-
-// <Card style={{ width: "18rem" }}>
-// <Col size="md-3" cname="align-content-center">
-//   <span className={styles["aBorder"]}>
-//     <span className={styles["bigDisp"]}>
-//       Survey Year: {props.selectedLake.year}
-//     </span>
-//     <br />
-//   </span>
-// </Col>
-// <Col size="md-6" cname="lakeDataDisp">
-//   <span className={styles["aBorder"]}>
-//     <span className={styles["bigDisp1"]}>{props.selectedLake.lake}</span>
-//     <br></br>
-//   </span>
-// </Col>
-// <Col size="md-3">
-//   <span className={styles["aBorder"]} style={{ float: "right" }}>
-//     <span className={styles["bigDisp"]}>
-//       Acres: {props.selectedLake.acres}
-//     </span>
-//     <br></br>
-//   </span>
-// </Col>
-// </Card>

@@ -29,9 +29,6 @@ export default function Lakes(props) {
   let temp;
   let dailyForecast = [];
 
-  console.log("process.env.node_env below");
-  console.log(process.env.NODE_ENV);
-
   useEffect(() => {
     loadLakes();
     loadWeather();
@@ -166,7 +163,7 @@ export default function Lakes(props) {
               <Br />
               <Br />
               <Br />
-              <div
+              {/* <div
                 className={styles["weather"]}
                 style={{ textAlign: "center" }}
               >
@@ -196,15 +193,8 @@ export default function Lakes(props) {
                 Tomorrow:
                 <Br />
                 {forecast.length > 0 && <img src={tempTomorrow} />}
-              </div>
-              {/* <Button
-                className={styles["linkButton"]}
-                onClick={() => window.open(selectedLake.map, "_blank")}
-                variant="secondary"
-                onClick={handleButtonClick}
-              >
-                GET WEATHER
-              </Button> */}
+              </div> */}
+
               <Button
                 className={styles["linkButton"]}
                 // href={selectedLake.trail}
