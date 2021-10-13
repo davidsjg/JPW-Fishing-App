@@ -53,6 +53,26 @@ body {
   align-items: flex-end;
 }
 
-.test1 {
+.header1 {
   padding-top: 11px;
+  background-color: #6c757d;
+  border-radius: 5px;
+  color: white;
+}
+
+.header2 {
+  border-radius: 5px;
+  background-color: #6c757d;
+  margin-bottom: 27px;
+  color: white;
+}
+
+.header3 {
+  /* text-align: right; */
+  text-align: center;
+  flex: auto;
+}
+
+.linkButton {
+  color: blue;
 }

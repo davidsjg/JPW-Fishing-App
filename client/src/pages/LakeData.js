@@ -143,7 +143,7 @@ export default function Lakes(props) {
         <Row>
           <Col size="md-4" cname="lakeName">
             <Row>
-              <Col size="md-5">
+              <Col size="md-5" cname="header1">
                 <span>
                   <span>{selectedLake.lake}</span>
                   <br></br>
@@ -161,7 +161,7 @@ export default function Lakes(props) {
             </Row>
           </Col>
 
-          <Col size="md-4" style={{ textAlign: "center", marginTop: 11 }}>
+          <Col size="md-4" cname="header2">
             {" "}
             <i style={{ textDecoration: "underline" }}>Current Weather:</i>
             {forecast.length > 0 && console.log(forecast)}
@@ -179,8 +179,9 @@ export default function Lakes(props) {
             {forecast.length > 0 && <img src={tempTomorrow} />}
             {/* </Contain> */}
           </Col>
-          <Col size="md-3"></Col>
-          <Col size="md-1">
+
+          <Col size="md-2"></Col>
+          <Col size="md-2" cname="header3">
             <Button
               className={styles["linkButton"]}
               // href={selectedLake.trail}
