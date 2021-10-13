@@ -12,6 +12,7 @@ import API from "../utils/API";
 import styles from "./LakeData.module.css";
 import Button from "react-bootstrap/Button";
 import NavBarLakes from "../components/NavBarLakes/NavBarLakes";
+import Card from "react-bootstrap/Card";
 import GenCard from "../components/GenCard/GenCard";
 
 export default function Lakes(props) {
@@ -139,8 +140,64 @@ export default function Lakes(props) {
     >
       <NavBarLakes lakeNames={lakeNames} />
       <Contain>
-        <GenCard selectedLake={selectedLake} />
+        {/* <GenCard selectedLake={selectedLake} /> */}
+        <Card style={{ flex: "auto" }}>
+          <Row>
+            <Col size="md-4" cname="lakeName">
+              <span>
+                <span>{selectedLake.lake}</span>
+                <br></br>
+              </span>
+              <span>
+                <span>Survey Year: {selectedLake.year}</span>
+                <br />
+              </span>
+              <span>
+                <span>Acres: {selectedLake.acres}</span>
+                <br></br>
+              </span>
+            </Col>
+            <Col size="md-6" style={{ textAlign: "center", marginTop: 11 }}>
+              {" "}
+              <i style={{ textDecoration: "underline" }}>Current Weather:</i>
+              {forecast.length > 0 && console.log(forecast)}
+              {forecast.length > 0 && <img src={tempFiveDay} />}
+              {cloud}
+              <Br />
+              Temp:
+              {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} |
+              Wind:
+              {forecast.length > 0 && (
+                <span>
+                  {windSpeed} MPH, {windDirection}
+                </span>
+              )}{" "}
+              | Tomorrow:
+              {forecast.length > 0 && <img src={tempTomorrow} />}
+              {/* </Contain> */}
+            </Col>
 
+            <Col size="md-2">
+              <Button
+                className={styles["linkButton"]}
+                // href={selectedLake.trail}
+                variant="secondary"
+                onClick={() => window.open(selectedLake.trail, "_blank")}
+                // style={{ float: "right" }}
+              >
+                Trail Info
+              </Button>{" "}
+              <Button
+                className={styles["linkButton"]}
+                onClick={() => window.open(selectedLake.map, "_blank")}
+                variant="secondary"
+                // style={{ float: "right" }}
+              >
+                Trail Map
+              </Button>
+            </Col>
+          </Row>
+        </Card>
         <Row>
           <Col size="md-8">
             <Row>
@@ -149,67 +206,12 @@ export default function Lakes(props) {
               </ImageContainer>
             </Row>
           </Col>
-          <Col size="md-3">
+          <Col size="md-4">
             <Row>
               <CutData lake={lake} fish={fish} selectedLake={selectedLake} />
             </Row>
             <Row>
               <BrookData lake={lake} fish={fish} selectedLake={selectedLake} />
-            </Row>
-          </Col>
-
-          <Col cname="buttonContain" size="md-1">
-            <Row>
-              <Br />
-              <Br />
-              <Br />
-              {/* <div
-                className={styles["weather"]}
-                style={{ textAlign: "center" }}
-              >
-                <i style={{ textAlign: "center", textDecoration: "underline" }}>
-                  Current Weather
-                </i>
-                <Br />
-                {forecast.length > 0 && console.log(forecast)}
-                {forecast.length > 0 && <img src={tempFiveDay} />}
-                {cloud}
-                <Br />
-                <Br />
-                Temp:
-                <Br />
-                {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>}
-                <Br />
-                <Br />
-                Wind:
-                <Br />
-                {forecast.length > 0 && (
-                  <span>
-                    {windSpeed} MPH, {windDirection}
-                  </span>
-                )}
-                <Br />
-                <Br />
-                Tomorrow:
-                <Br />
-                {forecast.length > 0 && <img src={tempTomorrow} />}
-              </div> */}
-
-              <Button
-                className={styles["linkButton"]}
-                // href={selectedLake.trail}
-                variant="secondary"
-                onClick={() => window.open(selectedLake.trail, "_blank")}
-              >
-                Trail Info
-              </Button>
-              <Button
-                className={styles["linkButton"]}
-                onClick={() => window.open(selectedLake.map, "_blank")}
-                variant="secondary"
-              >
-                Trail Map
-              </Button>
             </Row>
           </Col>
         </Row>

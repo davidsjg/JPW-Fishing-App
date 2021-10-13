@@ -52,3 +52,7 @@ body {
 .mainContain {
   align-items: flex-end;
 }
+
+.lakeName {
+  padding-top: 11px;
+}

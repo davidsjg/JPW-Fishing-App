@@ -79,46 +79,12 @@ export default function GenCard(props) {
 
   return (
     <>
-      <Card>
-        <Row>
-          <Col
-            size="md-6"
-            cname="lakeDataDisp"
-            style={{ textAlign: "center", marginTop: 11 }}
-          >
-            {/* <Contain mainContain="mainContain"> */}
-            <span>
-              <span>{props.selectedLake.lake}</span>
-              <br></br>
-            </span>
-            <span>
-              <span>Survey Year: {props.selectedLake.year}</span>
-              <br />
-            </span>
-            <span>
-              <span>Acres: {props.selectedLake.acres}</span>
-              <br></br>
-            </span>
-          </Col>
-          <Col style={{ textAlign: "center", borderLeft: "solid" }}>
-            <i style={{ textDecoration: "underline" }}>Current Weather:</i>
-            {forecast.length > 0 && console.log(forecast)}
-            {forecast.length > 0 && <img src={tempFiveDay} />}
-            {cloud}
-            <Br />
-            Temp:
-            {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} | Wind:
-            {forecast.length > 0 && (
-              <span>
-                {windSpeed} MPH, {windDirection}
-              </span>
-            )}{" "}
-            | Tomorrow:
-            {forecast.length > 0 && <img src={tempTomorrow} />}
-            {/* </Contain> */}
-          </Col>
-        </Row>
-      </Card>
+      {/* <Row>
+        <Col size="md-4">Test</Col>
+        <Col size="md-6">Test 2</Col>
+
+        <Col size="md-2">Test 2</Col>
+      </Row> */}
     </>
   );
 }

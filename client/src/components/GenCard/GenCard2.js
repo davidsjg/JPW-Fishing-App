@@ -78,61 +78,43 @@ export default function GenCard(props) {
 
   return (
     <Row>
-      <Card
-        className={styles["headerCard"]}
-        style={{ width: "18rem" }}
-        style={{ alignItems: "center" }}
+      <Col
+        cname="test"
+        size="md-9"
+        cname="lakeDataDisp"
+        style={{ textAlign: "center", marginTop: 11 }}
       >
-        <Col size="md-6" cname="lakeDataDisp">
+        {/* <Contain mainContain="mainContain"> */}
+        <span>
+          <span>{props.selectedLake.lake}</span>
+          <br></br>
+        </span>
+        <span>
+          <span>Survey Year: {props.selectedLake.year}</span>
+          <br />
+        </span>
+        <span>
+          <span>Acres: {props.selectedLake.acres}</span>
+          <br></br>
+        </span>
+      </Col>
+      <Col size="md-3" style={{ textAlign: "center", borderLeft: "solid" }}>
+        <i style={{ textDecoration: "underline" }}>Current Weather:</i>
+        {forecast.length > 0 && console.log(forecast)}
+        {forecast.length > 0 && <img src={tempFiveDay} />}
+        {cloud}
+        <Br />
+        Temp:
+        {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} | Wind:
+        {forecast.length > 0 && (
           <span>
-            <span>{props.selectedLake.lake}</span>
-            <br></br>
+            {windSpeed} MPH, {windDirection}
           </span>
-        </Col>
-        <Col size="md-3" cname="align-content-center">
-          <span>
-            <span>Survey Year: {props.selectedLake.year}</span>
-            <br />
-          </span>
-        </Col>
-        <Col size="md-3">
-          <span style={{ float: "right" }}>
-            <span>Acres: {props.selectedLake.acres}</span>
-            <br></br>
-          </span>
-        </Col>
-
-        <Row>
-          <div className={styles["weather"]} style={{ textAlign: "center" }}>
-            <i style={{ textAlign: "center", textDecoration: "underline" }}>
-              Current Weather
-            </i>
-            <Br />
-            {forecast.length > 0 && console.log(forecast)}
-            {forecast.length > 0 && <img src={tempFiveDay} />}
-            {cloud}
-            <Br />
-            <Br />
-            Temp:
-            <Br />
-            {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>}
-            <Br />
-            <Br />
-            Wind:
-            <Br />
-            {forecast.length > 0 && (
-              <span>
-                {windSpeed} MPH, {windDirection}
-              </span>
-            )}
-            <Br />
-            <Br />
-            Tomorrow:
-            <Br />
-            {forecast.length > 0 && <img src={tempTomorrow} />}
-          </div>
-        </Row>
-      </Card>
+        )}{" "}
+        | Tomorrow:
+        {forecast.length > 0 && <img src={tempTomorrow} />}
+        {/* </Contain> */}
+      </Col>
     </Row>
   );
 }
