@@ -140,64 +140,67 @@ export default function Lakes(props) {
     >
       <NavBarLakes lakeNames={lakeNames} />
       <Contain>
-        {/* <GenCard selectedLake={selectedLake} /> */}
-        <Card style={{ flex: "auto" }}>
-          <Row>
-            <Col size="md-4" cname="lakeName">
-              <span>
-                <span>{selectedLake.lake}</span>
-                <br></br>
-              </span>
-              <span>
-                <span>Survey Year: {selectedLake.year}</span>
-                <br />
-              </span>
-              <span>
-                <span>Acres: {selectedLake.acres}</span>
-                <br></br>
-              </span>
-            </Col>
-            <Col size="md-6" style={{ textAlign: "center", marginTop: 11 }}>
-              {" "}
-              <i style={{ textDecoration: "underline" }}>Current Weather:</i>
-              {forecast.length > 0 && console.log(forecast)}
-              {forecast.length > 0 && <img src={tempFiveDay} />}
-              {cloud}
-              <Br />
-              Temp:
-              {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} |
-              Wind:
-              {forecast.length > 0 && (
+        <Row>
+          <Col size="md-4" cname="lakeName">
+            <Row>
+              <Col size="md-5">
                 <span>
-                  {windSpeed} MPH, {windDirection}
+                  <span>{selectedLake.lake}</span>
+                  <br></br>
                 </span>
-              )}{" "}
-              | Tomorrow:
-              {forecast.length > 0 && <img src={tempTomorrow} />}
-              {/* </Contain> */}
-            </Col>
+                <span>
+                  <span>Survey Year: {selectedLake.year}</span>
+                  <br />
+                </span>
+                <span>
+                  <span>Acres: {selectedLake.acres}</span>
+                  <br></br>
+                </span>
+              </Col>
+              <Col size="md-7"></Col>
+            </Row>
+          </Col>
 
-            <Col size="md-2">
-              <Button
-                className={styles["linkButton"]}
-                // href={selectedLake.trail}
-                variant="secondary"
-                onClick={() => window.open(selectedLake.trail, "_blank")}
-                // style={{ float: "right" }}
-              >
-                Trail Info
-              </Button>{" "}
-              <Button
-                className={styles["linkButton"]}
-                onClick={() => window.open(selectedLake.map, "_blank")}
-                variant="secondary"
-                // style={{ float: "right" }}
-              >
-                Trail Map
-              </Button>
-            </Col>
-          </Row>
-        </Card>
+          <Col size="md-4" style={{ textAlign: "center", marginTop: 11 }}>
+            {" "}
+            <i style={{ textDecoration: "underline" }}>Current Weather:</i>
+            {forecast.length > 0 && console.log(forecast)}
+            {forecast.length > 0 && <img src={tempFiveDay} />}
+            {cloud}
+            <Br />
+            Temp:
+            {forecast.length > 0 && <span>{curTemp.toFixed(0)}F</span>} | Wind:
+            {forecast.length > 0 && (
+              <span>
+                {windSpeed} MPH {windDirection}
+              </span>
+            )}{" "}
+            | Tomorrow:
+            {forecast.length > 0 && <img src={tempTomorrow} />}
+            {/* </Contain> */}
+          </Col>
+          <Col size="md-3"></Col>
+          <Col size="md-1">
+            <Button
+              className={styles["linkButton"]}
+              // href={selectedLake.trail}
+              variant="secondary"
+              onClick={() => window.open(selectedLake.trail, "_blank")}
+              // style={{ float: "right" }}
+            >
+              Trail Info
+            </Button>{" "}
+            <Button
+              className={styles["linkButton"]}
+              onClick={() => window.open(selectedLake.map, "_blank")}
+              variant="secondary"
+              // style={{ float: "right" }}
+            >
+              Trail Map
+            </Button>
+          </Col>
+        </Row>
+
         <Row>
           <Col size="md-8">
             <Row>
