@@ -5,21 +5,30 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "../components/Row/Row";
 import Col from "../components/Col/Col";
 import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import NavBarLakes2 from "../components/NavBarLakes2/NavBarLakes2";
 
 export default function TableData() {
   const [lake, setLake] = useState([]);
   const [lakeArr, setLakeArr] = useState([]);
+  const [lakeNames, setLakeNames] = useState([]);
 
   let tempLake = [];
 
   let testTrue = true;
+  let tempArr = [];
 
   useEffect(() => {
     loadLakes();
   }, []);
 
+  function handleClick() {
+    console.log(lakeNames);
+  }
+
   function loadLakes() {
     let lakeArr = [];
+
     API.getLakes()
       .then((lake) => {
         setLake([lake.data]);
@@ -29,10 +38,16 @@ export default function TableData() {
           lake.data.length > 0 &&
             lake.data.map((lake) => {
               lakeArr.push(lake);
+              tempArr.push(lake.lake);
             });
         }
         console.log(lakeArr);
         setLakeArr(lakeArr);
+        setLakeNames(tempArr);
+
+        // lakeArr.map((lakeName) => {
+        //   tempArr.push(lakeName.lake);
+        // });
       })
 
       .catch((err) => console.log(err));
@@ -40,7 +55,7 @@ export default function TableData() {
 
   return (
     <>
-      <NavigationBar />
+      <NavBarLakes2 lakeNames={lakeNames} />
       <Container>
         <Row cname="justify-content-md-center">
           <Col size="md-3"></Col>
@@ -103,6 +118,7 @@ export default function TableData() {
           <Col size="md-2"></Col>
         </Row>
       </Container>
+      <Button onClick={handleClick}>Click Me</Button>
     </>
   );
 }
