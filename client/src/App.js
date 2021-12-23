@@ -16,7 +16,8 @@ function App() {
     <Router>
       <Contain>
         <Switch>
-          <Route exact path={"/"} render={(props) => <Home {...props} />} />
+          {/* <Route exact path={"/"} render={(props) => <Home {...props} />} /> */}
+          <Route exact path={"/"} component={Home} />
           <Route path={"/table"} component={TableData} />
           <Route path={"/lakes"} component={Lakes} />
           <Route
